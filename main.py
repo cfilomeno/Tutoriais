@@ -15,8 +15,8 @@ def g(x,A,μ,σ):
 
 x = np.linspace(-3, 3, 1000)
 fig, ax = plt.subplots()
-# ax.plot(x, g(x, 1, 0, 1))
-
+ax.plot(x, g(x, 1, 0, 1), 'r')
+# fig.savefig('gaussiana.png')
 
 def f(x):
     return np.exp(-(x-2)**2) + np.exp(-(x-6)**2/10) + 1/(x**2 + 1)
