@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>Difratograma</h1>
+
+{% endblock %}
+
+{% block body %}
+
+<form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="plot">
+</form>
+{% endblock %}
