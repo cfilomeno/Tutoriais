@@ -1,14 +1,12 @@
 import os
 import pandas as pd
-import matplotlib.pyplot as plt
-from flask import Flask, flash, request, redirect, url_for, render_template, send_from_directory
+from flask import Flask, request, redirect, url_for, render_template, send_from_directory
 from werkzeug.utils import secure_filename
 
 from bokeh.plotting import figure, output_file
-from bokeh.io import show
+from bokeh.io import show, save
 from bokeh.layouts import column
 from bokeh.models import ColumnDataSource, RangeTool
-from bokeh.plotting import figure
 
 UPLOAD_FOLDER = '/tmp'
 
@@ -58,10 +56,9 @@ def uploaded_file(filename):
     select.add_tools(range_tool)
     select.toolbar.active_multi = range_tool
 
-    show(column(p, select))
-
-    return render_template('index.html')
-        # send_from_directory(app.config['UPLOAD_FOLDER'], 'dif.html')
+    save(column(p, select))
+    return redirect('/')
+    # return redirect('/uploads/templates/page2.html')
 
 
 if __name__ == "__main__":
