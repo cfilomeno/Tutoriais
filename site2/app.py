@@ -7,6 +7,7 @@ from bokeh.plotting import figure, output_file
 from bokeh.io import show, save
 from bokeh.layouts import column
 from bokeh.models import ColumnDataSource, RangeTool
+from bokeh.embed import components
 
 UPLOAD_FOLDER = '/tmp'
 
@@ -56,9 +57,10 @@ def uploaded_file(filename):
     select.add_tools(range_tool)
     select.toolbar.active_multi = range_tool
 
-    save(column(p, select))
-    return redirect('/')
-    # return redirect('/uploads/templates/page2.html')
+    script, div = components([p, select])
+    save(print(script, div[0], div[1]))
+    # save(column(p, select))
+    return render_template('page2.html')
 
 
 if __name__ == "__main__":
