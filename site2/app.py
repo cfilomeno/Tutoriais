@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import json
 from flask import Flask, request, redirect, url_for, render_template, send_from_directory
 from werkzeug.utils import secure_filename
 
@@ -7,7 +8,9 @@ from bokeh.plotting import figure, output_file
 from bokeh.io import show, save
 from bokeh.layouts import column
 from bokeh.models import ColumnDataSource, RangeTool
-from bokeh.embed import components
+from bokeh.embed import components, file_html, server_document
+from bokeh.resources import CDN
+
 
 UPLOAD_FOLDER = '/tmp'
 
@@ -33,7 +36,7 @@ def uploaded_file(filename):
     df.dropna(axis=1, inplace=True)
     ColumnDataSource(df)
 
-    output_file('/tmp/dif.html')
+    # output_file('/tmp/dif.html', title='Difratograma')
     p = figure(plot_height=500, plot_width=1200, toolbar_location="right",
                x_axis_type="linear", x_axis_location="below",
                background_fill_color="#efefef", x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
@@ -57,10 +60,11 @@ def uploaded_file(filename):
     select.add_tools(range_tool)
     select.toolbar.active_multi = range_tool
 
-    script, div = components([p, select])
-    save(print(script, div[0], div[1]))
-    # save(column(p, select))
-    return render_template('page2.html')
+    plot = column(p, select)
+    file_html(plot, CDN, "/tmp/dif.html")
+    item_text = json.dumps(json_item(plot, "/tmp/dif"))
+    item = JSON.parse(item_text);
+    Bokeh.embed.embed_item(item)
 
 
 if __name__ == "__main__":
