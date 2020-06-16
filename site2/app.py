@@ -15,7 +15,7 @@ from bokeh.embed import components, file_html, server_document, json_item
 from bokeh.resources import CDN
 
 
-UPLOAD_FOLDER = '/tmp'
+UPLOAD_FOLDER = '/home/cleber/Meus Projetos/fitdrx/site2/templates'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -39,7 +39,8 @@ def uploaded_file(filename):
     df.dropna(axis=1, inplace=True)
     ColumnDataSource(df)
 
-    output_file('/tmp/dif.html', title='Difratograma')
+    output_file('/home/cleber/Meus Projetos/fitdrx/site2/templates/dif.html', title='Difratograma')
+
     p = figure(plot_height=500, plot_width=1200, toolbar_location="right",
                x_axis_type="linear", x_axis_location="below",
                background_fill_color="#efefef", x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
@@ -62,7 +63,14 @@ def uploaded_file(filename):
     select.toolbar.active_multi = range_tool
 
     save(column(p, select))
+
     return render_template('page2.html')
+# @app.route('/')
+# def index():
+#     plot = uploaded_file()
+#     script, div = components(plot)
+#     return render_template("dif.html", script=script, div=div)
+#
 
 
 if __name__ == "__main__":
