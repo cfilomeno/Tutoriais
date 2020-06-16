@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1 style="text-align: center">Difratograma</h1>
+<h1 style="text-align: center">Ajuste de pico</h1>
 
 {% endblock %}
 
@@ -14,17 +14,18 @@
     </div>
 </form>
 <hr>
+        <div>
+            <embed type="text/html" src="dif.html" width="100%" height="3000">
+
+        </div>
 <!--    <div>-->
-<!--        {% include /tmp/dif.html %}-->
+<!--        <iframe src="file:///tmp/dif.html"-->
+<!--            sandbox="allow-same-origin allow-scripts"-->
+<!--            width="100%"-->
+<!--            height="500"-->
+<!--            scrolling="no"-->
+
+<!--            frameborder="0">-->
+<!--        </iframe>-->
 <!--    </div>-->
-    <div>
-        <iframe src="/tmp/dif.html"
-            sandbox="allow-same-origin allow-scripts"
-            width="100%"
-            height="500"
-            scrolling="no"
-            seamless="seamless"
-            frameborder="0">
-        </iframe>
-    </div>
 {% endblock %}
