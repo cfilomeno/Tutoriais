@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {{ https://cdn.bokeh.org/bokeh/release/bokeh-2.1.0.min.css }}
+    {{ https://cdn.bokeh.org/bokeh/release/bokeh-2.1.0.min.js }}
+  </head>
+  <body>
+    <iframe src="dif.html"></iframe>
+    {{ plot_div|indent(8) }}
+    {{ plot_script|indent(8) }}
+  </body>
+</html>
