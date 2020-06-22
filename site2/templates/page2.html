@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-
 {% block head %}
+<link rel="stylesheet" href={{cdn_css | safe}} type="text/css" />
+<script type="text/javascript" src={{cdn_js | safe}}></script>
 <h1 style="text-align: center">Ajuste de pico</h1>
 
 {% endblock %}
@@ -14,28 +15,8 @@
     </div>
 </form>
 <hr>
-<form action="/uploads/<filename>">
-    <div>
-        <iframe src="dif.html"
-                sandbox="allow-scripts allow-same-origin"
-                width="1200"
-                height="500"
-                scrolling="yes">
-        </iframe>
-
-    </div>
-</form>
+{{script | safe}}
+{{div | safe}}
 
 
-
-<!--    <div>-->
-<!--        <iframe src="file:///tmp/dif.html"-->
-<!--            sandbox="allow-same-origin allow-scripts"-->
-<!--            width="100%"-->
-<!--            height="500"-->
-<!--            scrolling="no"-->
-
-<!--            frameborder="0">-->
-<!--        </iframe>-->
-<!--    </div>-->
 {% endblock %}
