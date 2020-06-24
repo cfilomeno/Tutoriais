@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block head %}
-<link rel="stylesheet" href={{cdn_css | safe}} type="text/css" />
-<script type="text/javascript" src={{cdn_js | safe}}></script>
+
+    <link href="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
 <h1 style="text-align: center">Ajuste de pico</h1>
 
 {% endblock %}
@@ -13,12 +14,14 @@
         <input type="file" name="file" id="search"><br/><br/>
         <input value="Plot" type="submit" id="btn_s">
     </div>
+
 </form>
 <hr>
 
-         {{script | safe}}
-         {{div | safe}}
-
-
+    <div>
+        {{script | safe}}
+        {{div0 | safe}}
+        {{div1 | safe}}
+    </div>
 
 {% endblock %}

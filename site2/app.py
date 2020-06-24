@@ -5,9 +5,9 @@ from werkzeug.utils import secure_filename
 import json
 import jinja2
 from bokeh.plotting import figure, output_file
-from bokeh.io import show, save
-from bokeh.layouts import column
-from bokeh.models import ColumnDataSource, RangeTool, BoxSelectTool, HoverTool
+from bokeh.io import show, save, curdoc
+from bokeh.layouts import column, layout
+from bokeh.models import ColumnDataSource, RangeTool, BoxSelectTool, HoverTool, Button
 from bokeh.embed import components, file_html, server_document
 from bokeh.resources import CDN
 
@@ -39,12 +39,17 @@ def uploaded_file(filename):
     p = figure(plot_height=500, plot_width=1200, toolbar_location="right", tools="save,xwheel_zoom," 
                                                                                  ",reset,crosshair",
                x_axis_type="linear", x_axis_location="below",
-               background_fill_color="#efefef", x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
+               background_fill_color=None, x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
 
     p.add_tools(BoxSelectTool(dimensions='width'))
-    p.scatter('Angle', 'Det1Disc1', source=source, legend_label=filename)
+
+    p.scatter('Angle', 'Det1Disc1', source=source, legend_label=filename, color='black', size=0.2, alpha=0)
+    p.line('Angle', 'Det1Disc1', source=source, legend_label=filename, line_color='black')
     p.yaxis.axis_label = 'I (U.A.)'
     p.xaxis.axis_label = '2theta (º)'
+    btn = Button(label='Fit', button_type="success")
+
+    # curdoc().add_root(btn, p)
 
     # select = figure(title='Selecionar pico',
     #                 plot_height=130, plot_width=1200, y_range=p.y_range,
@@ -59,15 +64,17 @@ def uploaded_file(filename):
     # select.add_tools(range_tool)
     # select.toolbar.active_multi = range_tool
 
-    # plots = (p, select)
-    script, div = components(p)
-    cdn_js = CDN.js_files[0]
-    cdn_css = CDN.css_files
+    # plots = (p, btn)
+    script, div = components((p, btn))
+    print(div[0], div[1])
+    print(script[0])
+    # cdn_js = CDN.js_files
+    # cdn_css = CDN.css_files
 
     return render_template('page2.html',
                            script=script,
-                           div=div,
-                           cdn_js=cdn_js, cdn_css=cdn_css)
+                           div0=div[0],
+                           div1=div[1])
 
 
 if __name__ == "__main__":
