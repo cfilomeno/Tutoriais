@@ -1,0 +1,28 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<title>DRX-pó</title>
+    <link href="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
+
+<main role="main" class="container">
+  <div class="starter-template">
+    <h1 align="center">Difratograma de Raios X de Pó</h1>
+    <p class="lead">Carregue o documento .txt enviado por e-mail.<br></p>
+  </div>
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="search"><br/><br/>
+
+                    <button type="submit" class="btn btn-primary">Plotar gráfico</button>
+
+        </form>
+<hr>
+</main>
+    <div class="script">
+        {{script | safe}}
+        {{div | safe}}
+
+    </div>
+
+{% endblock %}

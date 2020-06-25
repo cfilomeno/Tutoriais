@@ -11,7 +11,7 @@ from bokeh.models import ColumnDataSource, RangeTool, BoxSelectTool, HoverTool, 
 from bokeh.embed import components, file_html, server_document
 from bokeh.resources import CDN, INLINE
 
-UPLOAD_FOLDER = '/home/cleber/Meus Projetos/fitdrx/site2/templates'
+UPLOAD_FOLDER = '/home/cleber/Documentos/GitHub/fitdrx/site2/templates'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -27,6 +27,16 @@ def upload_file():
     return render_template('index.html')
 
 
+@app.route('/index2')
+def index2():
+    return render_template('index2.html')
+
+
+@app.route('/base2')
+def base2():
+    return render_template('base2.html')
+
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -34,18 +44,18 @@ def uploaded_file(filename):
     df = pd.read_csv(filepath, skipinitialspace=True, skiprows=134)
     df.dropna(axis=1, inplace=True)
     source = ColumnDataSource(df)
-    # output_file('/home/cleber/Documentos/GitHub/fitdrx/site2/templates/dif.html')
+
     p = figure(plot_height=500, plot_width=1200, toolbar_location="right", tools="save,xwheel_zoom," 
                                                                                  ",reset,crosshair",
                x_axis_type="linear", x_axis_location="below",
                background_fill_color=None, x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
 
     p.add_tools(BoxSelectTool(dimensions='width'))
-    p.add_tools(CustomAction(icon="/home/cleber/Meus Projetos/fitdrx/site2/templates/icon.png",
+    p.add_tools(CustomAction(icon="/home/cleber/Documentos/GitHub/fitdrx/site2/templates/icon.png",
                              callback=CustomJS(code='alert("foo")')))
 
-    p.scatter('Angle', 'Det1Disc1', source=source, legend_label=filename, color='black', size=0.2, alpha=0)
-    p.line('Angle', 'Det1Disc1', source=source, legend_label=filename, line_color='black')
+    p.scatter('Angle', 'Det1Disc1', source=source, legend_label=filename, color='green', size=0.2, alpha=0)
+    p.line('Angle', 'Det1Disc1', source=source, legend_label=filename, line_color='green')
     p.yaxis.axis_label = 'I (U.A.)'
     p.xaxis.axis_label = '2theta (º)'
 
@@ -68,7 +78,7 @@ def uploaded_file(filename):
     cdn_js = CDN.js_files
     cdn_css = CDN.css_files
 
-    return render_template('page2.html',
+    return render_template('page2b.html',
                            script=script,
                            div=div,
                            cdn_js=cdn_js,
