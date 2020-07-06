@@ -1,4 +1,4 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 <title>DRX-pó</title>
@@ -18,11 +18,13 @@
 
         </form>
 <hr>
-</main>
-    <div class="script">
-        {{script | safe}}
-        {{div | safe}}
 
+</main>
+    <div>
+        {{div | safe}}
+    </div>
+    <div>
+        {{script | safe}}
     </div>
 
 {% endblock %}

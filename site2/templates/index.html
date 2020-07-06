@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<h1 style="text-align: center">Difratograma</h1>
+{% block content %}
+<title>DRX-pó</title>
 
-{% endblock %}
 
-{% block body %}
+<main role="main" class="container">
+  <div class="starter-template">
+    <h1 align="center">Difratograma de Raios X de Pó</h1>
+    <p class="lead">Carregue o documento .txt enviado por e-mail.<br></p>
+  </div>
 
-<form action="/" method="POST" enctype="multipart/form-data">
-    <div class="buttonHolder">
-        <input type="file" name="file" id="search"><br/><br/>
-        <input value="Plot" type="submit" id="btn_s">
-    </div>
-</form>
-<hr>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="search"><br/><br/>
+                <div class="file-path-wrapper">
+
+                </div>
+
+                    <button type="submit" class="btn btn-primary">Plotar gráfico</button>
+
+        </form>
+
+</main>
+
 
 {% endblock %}
