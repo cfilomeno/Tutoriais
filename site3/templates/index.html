@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chatset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>site 3 XRD</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Hello. Do the upload: </h1>
+    </header>
+    <section>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br><input type="submit" value="PLOT">
+        </form>
+     <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; Filomeno</p>
+    </footer>
+</body>
+</html>

@@ -1,25 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 from scipy.optimize import curve_fit
-
-
-# In[3]:
-
 
 df = pd.read_csv('Cu2', skipinitialspace=True)
 df.dropna(axis=1, inplace=True)
-
-
-# In[4]:
 
 
 def pvoigt(x, A, mu, sigma, alpha, K):
@@ -27,7 +14,7 @@ def pvoigt(x, A, mu, sigma, alpha, K):
     return ((1-alpha)*A/(sigmag*math.sqrt(2*math.pi))) * (np.exp(-(x-mu)**2 / (2*sigmag**2))) + (alpha*A/math.pi)*(sigma/((x - mu)**2 + sigma**2)) + K
 
 
-def gauss(x,A,mu,sigma,K):
+def gauss(x, A, mu, sigma, K):
     return (A / (sigma * math.sqrt(2 * math.pi)) * np.exp(-(x-mu)**2 / (2*sigma**2)))+K
 
 
@@ -38,15 +25,7 @@ ax.plot(df['Angle'], pvoigt(df['Angle'], 1508.265, 35.565, 0.564, 1.103, 149.717
 plt.scatter(df['Angle'], df['Int'], alpha=0.5, marker='x' )
 plt.legend()
 
-
-# In[39]:
-
-
 df['Angle'].describe()
-
-
-# In[5]:
-
 
 guess = [max(df['Int']), np.mean(df['Angle']), 0.5, 0, min(df['Int'])]
 
@@ -59,10 +38,6 @@ for i in range(n):
 plt.scatter(df['Angle'], df['Int'])
 plt.plot(df['Angle'], y, 'r')
 
-
-# In[6]:
-
-
 a = df['Angle'].values
 s = df['Int'].values
 c, cov = curve_fit(pvoigt, a, s, guess)
@@ -74,31 +49,15 @@ for i in range(n):
 plt.scatter(df['Angle'], df['Int'], alpha=0.5, color='black')
 plt.plot(df['Angle'], y, 'r')
 
-
 print(f'Amplitude: {c[0]:3.3f},\n Média mu: {c[1]:3.3f},\n Sigma: {c[2]:3.3f},\n Alpha: {c[3]:3.3f},\n K (offset): {c[4]:3.3f}')
-
-
-# In[7]:
 
 
 from sklearn.metrics import r2_score
 print('R2: ', r2_score(y, s))
 
-
-# In[9]:
-
-
 print(n)
 
 
-# In[10]:
-
-
-581-141
-
-
-# In[ ]:
-
-
-
+print(581-141)
+plt.show()
 

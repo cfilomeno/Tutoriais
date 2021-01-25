@@ -9,16 +9,16 @@
     <h1 align="center">Difratograma de Raios X de Pó</h1>
     <p class="lead">Carregue o documento .txt enviado por e-mail.<br></p>
   </div>
+  
+  <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" id="search">
+          <br><br>
+          <div class="file-path-wrapper">
 
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" id="search"><br/><br/>
-                <div class="file-path-wrapper">
+          </div>
 
-                </div>
-
-                    <button type="submit" class="btn btn-primary">Plotar gráfico</button>
-
-        </form>
+      <button type="submit" class="btn btn-primary">Plotar gráfico</button>
+  </form>
 
 </main>
 
