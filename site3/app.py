@@ -25,13 +25,14 @@ def uploaded_file(filename):
     ax.plot(xrd['Angle'], xrd['Det1Disc1'], label=filename)
     plt.legend()
     generatedfilename = 'plot_' + filename + '.png'
-    plt.savefig(os.path.join(app.config['UPLOAD_FOLDER'], generatedfilename))
+    #plt.savefig(os.path.join(app.config['UPLOAD_FOLDER'], generatedfilename))
+    plt.savefig(os.path.join('static', generatedfilename))
 
     # AQUI TERMINA O PROCESSAMENTO DO ARQUIVO RECEBIDO.
     # O RESULTADO FOI A IMAGEM COM O NOME generatedfilename
     # SALVEI DENTRO DO DIRETORIO DE UPLOADS.
 
-    return render_template('page2.html')
+    return render_template('page2.html', value=generatedfilename)
     #return send_from_directory(app.config['UPLOAD_FOLDER'], generatedfilename)
 
 
