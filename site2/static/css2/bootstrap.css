@@ -289,6 +289,10 @@ input[type="checkbox"] {
   padding: 0;
 }
 
+input[type='file'] {
+  display: none
+}
+
 textarea {
   overflow: auto;
   resize: vertical;

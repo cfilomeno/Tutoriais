@@ -82,7 +82,5 @@ def uploaded_file(filename):
     #    cdn_css=cdn_css)
 
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)

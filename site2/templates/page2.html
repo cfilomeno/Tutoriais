@@ -1,27 +1,25 @@
 {% extends 'base.html' %}
-{% block head %}
 
-    <link href="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.css" rel="stylesheet" type="text/css">
-    <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
-<h1 style="text-align: center">Ajuste de pico</h1>
+{% block content %}
 
-{% endblock %}
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"></script>
 
-{% block body %}
 
-<form action="/" method="POST" enctype="multipart/form-data">
-    <div class="buttonHolder">
-        <input type="file" name="file" id="search"><br/><br/>
-        <input value="Plot" type="submit" id="btn_s">
+    <div style="float: center; margin-left: 20%; margin-right: auto;">
+
+        {{ div0 | safe }}
+        {{ div1 | safe }}
     </div>
 
-</form>
-<hr>
 
-    <div class="script">
-        {{script | safe}}
-        {{div | safe}}
+        {{ script | safe }}
 
-    </div>
+
+
+
+
+
+
 
 {% endblock %}

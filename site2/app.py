@@ -15,7 +15,7 @@ from bokeh.resources import INLINE
 from bokeh.embed import components, file_html, server_document
 from bokeh.resources import CDN, INLINE
 
-UPLOAD_FOLDER = '/home/cleber/Documentos/GitHub/fitdrx/site2/templates'
+UPLOAD_FOLDER = 'uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -31,30 +31,29 @@ def upload_file():
     return render_template('index.html')
 
 
-@app.route('/teste')
-def teste():
-    # button = Button(label='FIT', aspect_ratio=10, background='red',
-    #                 align='center', button_type='primary',
-    #                 width_policy='max')
+# @app.route('/teste')
+# def teste():
+#     button = Button(label='FIT', aspect_ratio=10, background='red',
+#                     align='center', button_type='primary',
+#                     width_policy='max')
+#
+#     # w1 = Button(label='FIT', aspect_ratio=10, background='red',
+#     #                 align='center', button_type='primary',
+#     #                 width_policy='max')
+#
+#
+#     # Get JavaScript/HTML resources
+#     script, div1 = components(WidgetBox(button, width=500))
+#
+#     # Get JavaScript/HTML resources
+#
+#     # js_resources = INLINE.render_js()
+#     # css_resources = INLINE.render_css()
+#     return render_template('teste.html',
+#                            script=script, div1=div1)
 
-    w1 = Button(label='FIT', aspect_ratio=10, background='red',
-                    align='center', button_type='primary',
-                    width_policy='max')
 
-
-    # Get JavaScript/HTML resources
-    script, div1 = components(WidgetBox(w1, width=500))
-
-    # Get JavaScript/HTML resources
-
-    js_resources = INLINE.render_js()
-    css_resources = INLINE.render_css()
-    return render_template('teste.html', js_resources=js_resources,
-                           css_resources=css_resources,
-                           script=script, div1=div1)
-
-
-@app.route('/uploads/<filename>')
+@app.route('/site2/<filename>')
 def uploaded_file(filename):
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
@@ -62,49 +61,42 @@ def uploaded_file(filename):
     df.dropna(axis=1, inplace=True)
     source = ColumnDataSource(df)
 
-    p = figure(plot_height=500, plot_width=1200, toolbar_location="right", tools="save,xwheel_zoom,"
+    p = figure(plot_height=700, plot_width=1000, toolbar_location="right", tools="save,xwheel_zoom,"
                                                                                  ",reset,crosshair",
                x_axis_type="linear", x_axis_location="below",
                background_fill_color=None, x_range=(df['Angle'].iloc[0], df['Angle'].iloc[-1]))
 
     p.add_tools(BoxSelectTool(dimensions='width'))
-    p.add_tools(CustomAction(icon="/home/cleber/Documentos/GitHub/fitdrx/site2/templates/icon.png",
+    p.add_tools(CustomAction(icon="/home/cleber/Documentos/GitHub/fitdrx/site2/static/icon.png",
                              callback=CustomJS(code='alert("foo")')))
 
     p.scatter('Angle', 'Det1Disc1', source=source, legend_label=filename, color='green', size=0.2, alpha=0)
-    p.line('Angle', 'Det1Disc1', source=source, legend_label=filename, line_color='green')
+    p.line('Angle', 'Det1Disc1', source=source, legend_label=filename, line_color='blue')
     p.yaxis.axis_label = 'I (U.A.)'
     p.xaxis.axis_label = '2theta (º)'
     button = Button(label='FIT', aspect_ratio=10, background='red',
                     align='center', button_type='primary',
                     width_policy='max')
+    # button = Button(label='FIT', aspect_ratio=10, background='red',
+    #                 align='center', button_type='primary',
+    #                 width_policy='max')
 
+    select = figure(title='Selecionar pico',
+                    plot_height=110, plot_width=1030, y_range=p.y_range,
+                    x_axis_type="linear", y_axis_type=None,
+                    tools="", toolbar_location=None, background_fill_color="#efefef")
+    range_tool = RangeTool(x_range=p.x_range)
+    range_tool.overlay.fill_color = "navy"
+    range_tool.overlay.fill_alpha = 0.2
+    select.line('Angle', 'Det1Disc1', source=df)
+    select.ygrid.grid_line_color = None
+    select.xgrid.grid_line_color = None
+    select.add_tools(range_tool)
+    select.toolbar.active_multi = range_tool
 
-    # select = figure(title='Selecionar pico',
-    #                 plot_height=130, plot_width=1200, y_range=p.y_range,
-    #                 x_axis_type="linear", y_axis_type=None,
-    #                 tools="", toolbar_location=None, background_fill_color="#efefef")
-    # range_tool = RangeTool(x_range=p.x_range)
-    # range_tool.overlay.fill_color = "navy"
-    # range_tool.overlay.fill_alpha = 0.2
-    # select.line('Angle', 'Det1Disc1', source=df)
-    # select.ygrid.grid_line_color = None
-    # select.xgrid.grid_line_color = None
-    # select.add_tools(range_tool)
-    # select.toolbar.active_multi = range_tool
+    script, divs = components((p, select))
 
-
-    script, div = components(button)
-
-    # cdn_js = CDN.js_files
-    # cdn_css = CDN.css_files
-
-    return render_template('index.html',
-                           script=script,
-                           div=div)
-        
-                        #    cdn_js=cdn_js,
-                        #    cdn_css=cdn_css)
+    return render_template('page2.html', script=script, div0=divs[0], div1=divs[1])
 
 
 if __name__ == "__main__":

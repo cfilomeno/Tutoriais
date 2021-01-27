@@ -2,29 +2,30 @@
 
 {% block content %}
 <title>DRX-pó</title>
-    <link href="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.css" rel="stylesheet" type="text/css">
     <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"></script>
 
-<main role="main" class="container">
-  <div class="starter-template">
-    <h1 align="center">Difratograma de Raios X de Pó</h1>
-    <p class="lead">Carregue o documento .txt enviado por e-mail.<br></p>
-  </div>
 
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" id="search"><br/><br/>
+    <form action="/" method="POST" enctype="multipart/form-data">
+    <div class="buttonHolder">
+        <input type="file" name="file" id="search"><br/><br/>
+        <button type="submit" class="btn btn-primary">Plotar gráfico</button>
+    </div>
 
-                    <button type="submit" class="btn btn-primary">Plotar gráfico</button>
-
-        </form>
+    </form>
 <hr>
 
-</main>
-    <div>
-        {{div | safe}}
-    </div>
-    <div>
-        {{script | safe}}
-    </div>
+
+            {{ script|safe}}
+        <div style="margin: 0; text-align: center">
+            {{ div|safe }}
+        </div>
+
+
+
+
+    <footer>
+        <p>&copy; Filomeno</p>
+    </footer>
 
 {% endblock %}
