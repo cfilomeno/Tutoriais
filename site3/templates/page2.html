@@ -1,23 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta chatset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>site 3 XRD</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
-</head>
-<body>
-    <header>
-        <h1>Imagem carregada</h1>
-    </header>
-    <section>
-        <img src="{{url_for('static', filename=value)}}" width = "500">
+{% extends 'base.html' %}
 
-     <div id="res"></div>
-    </section>
-    <footer>
-        <p>&copy; Filomeno</p>
-    </footer>
-</body>
-</html>
+{% block content %}
+
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"></script>
+
+    <div style="position: absolute; top: 80px; right: 10%;">
+        <section style="background: white; border-radius: 10px; padding: 15px; width: 400px; margin: auto;
+        box-shadow: 5px 5px 10px rgba(77, 51, 51, 0.521); ">
+             Ponto A: <input type="number" name="ponto_a" id="ponto_a" min="0" max="200"><br><br>
+             Ponto B: <input type="number" name="ponto_b" id="ponto_b" min="0" max="200"><br>
+        </section>
+        <br><button type="submit" class="btn btn-secondary" style="background-color: #C11B17; width: 200px" >FIT</button>
+    </div>
+    <div style="position: relative">
+
+        {{ div0 | safe }}
+        {{ div1 | safe }}
+    </div>
+
+
+        {{ script | safe }}
+
+
+
+
+
+{% endblock %}

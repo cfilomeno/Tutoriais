@@ -1,39 +1,9 @@
 body {
-    background: rgb(70, 142, 236);
-    font: normal 15pt Arial;
-
+    margin: 0;
+    font-family: sans-serif;
 }
 
-header {
-    color: white;
-    text-align: center;
+.buttonHolder{ text-align: center; }
 
+.script{ text-align: center;}
 
-}
-
-section {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 5px 5px 10px rgb(77, 51, 51, 0.521)
-
-
-}
-
-select#flista {
-    width: 150px;
-}
-
-footer {
-    color: white;
-    text-align: center;
-    font-style: italic;
-
-
-}
-
-.bk-plot-wrapper table {
-    margin: 0 auto;
-}
