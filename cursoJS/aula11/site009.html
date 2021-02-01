@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificar nacionalidade</h1>
+    País de origem: <input type="text" name="txtpa" id="txtpa">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">Olá</div>
+    <script>
+        function calcular() {
+            var txtp = window.document.querySelector('input#txtpa')
+            var res = window.document.querySelector('div#res')
+            var pais = toUpperCase(txtp)
+            if(pais == 'BRASIL') {
+                res.innerHTML = `<p>Você é <strong>brasileiro</strong>!</p>`
+            } else {
+                res.innerHTML = `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">    
+</head>
+<body>
+    <header>
+        <h1>Upload de arquivo CSV</h1>
+    </header>
+    <section>
+        <form class="form-inline">
+            <div class="form-group">
+              <label for="files">Upload um arquivo CSV formatado:</label>
+              <input type="file" id="files"  class="form-control" accept=".csv" required />
+            </div>
+            <div class="form-group">
+             <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>             
+             </div>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Filomeno</p>
+    </footer>
+    <script>
+
+        getData();
+        
+        async function getData() {
+            const response = await fetch('GLB.Ts+dSST.csv');
+            const data = await response.text();
+            
+
+            const table = data.split('\n').slice(1);
+            table.forEach(row => {
+                const columns = row.split(',');
+                const year = columns[0]
+                const temp = columns[1]
+                console.log(year, temp);
+
+            })
+            
+ }                
+    </script>
+</body>
+</html>
