@@ -1,0 +1,13 @@
+#tabuada
+num = int(input('\033[35mVer a tabuada de:\033[m '))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 1, num*1))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 2, num*2))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 3, num*3))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 4, num*4))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 5, num*5))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 6, num*6))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 7, num*7))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 8, num*8))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 9, num*9))
+print('\033[1;36m{}\033[m  x {:2} =  \033[33m{}\033[m'.format(num, 10, num*10))
+print('\033[1;31m-\033[m'*14)
