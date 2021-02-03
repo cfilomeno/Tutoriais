@@ -20,15 +20,15 @@
                 {% if form.errors.password %}
                 <div class="alert alert-danger" role="alert">
                     <ul>
-                    {% for e in form.errors.password %}
-                        <li>{{ e }}</li>
-                    {% endfor %}
-                    {{ form.errors.password }}
+                        {% for e in form.errors.password %}
+                            <li>{{ e }}</li>
+                        {% endfor %}
+                        {{ form.errors.password }}
                     </ul>
                 </div>
             </div>
             {% endif %}
-            </div>
+
             <div class="checkbox">
                 <label>
                     {{ form.remember_me }} Remember me
