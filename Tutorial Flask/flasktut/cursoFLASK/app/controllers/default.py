@@ -1,10 +1,17 @@
+from flask import render_template
 from app import app
 
 
-@app.route("/index")
-@app.route("/")
-def index():
-    return "Hello world!"
+@app.route("/index/<user>")
+@app.route("/", defaults={"user": None})
+def index(user):
+    return render_template('index.html', user=user)
+
+
+# @app.route("/index")
+# @app.route("/")
+# def index():
+#     return "Hello world!"
 
 
 # @app.route("/test", defaults={'name': None})
@@ -23,6 +30,7 @@ def index():
 #     return "oi"
 
 
-@app.route("/test/", methods=['GET'])
-def test():
-    return "Oi!"
+# @app.route("/test/", methods=['GET'])
+# def test():
+#     return "Oi!"
+
