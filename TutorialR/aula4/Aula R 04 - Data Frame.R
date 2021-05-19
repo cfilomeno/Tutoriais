@@ -55,9 +55,9 @@ planetas[planetas$diamete>=5, ]
 ############
 #1. Usando o data.frame planetas, selecione a primeira linha
 #das colunas 2 e 5
-
+planetas[1, c(2,5)]
 #2. Selecione apenas os planetas que tem diâmetro menor do que 0.6
-
+planetas[planetas$diameter<0.6, ]
 #3. A função order() retorna um novo vetor com a posição
 #ordeneda. Por exemplo
 v1<-c(10,50,20,70,90,40,20)
@@ -69,6 +69,13 @@ v1 #agora v1 está em ordem crescente
 
 #Agora ordene o data.frame
 #planetas com base no diâmetro
-
+o <- order(planetas$diameter)
+planetas_by_diameter <- data.frame(name[o], type[o], diameter[o], rotation[o], rings[o])
+planetas_by_diameter
 #4. Crie um data.frame com três colunas. A primeira coluna com números,
 #a segunda, com um fator e a terceira com TRUE/FALSE.
+col1 <- c(11, 22, 33, 44, 55)
+col2 <- factor(c("azul", "vermelho", "vermelho", "vermelho", "azul"))
+col3 <- c(TRUE, FALSE, FALSE, TRUE, FALSE)
+df <- data.frame(col1, col2, col3)
+df

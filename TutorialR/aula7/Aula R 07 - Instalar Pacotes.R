@@ -51,8 +51,9 @@ vignette(topic='ggplot2-specs', package='ggplot2')
 #EXERCÍCIOS
 #EXERCÍCIOS
 #1. Instale o pacote 'MuMIn' usando a função
-#install.packages().
-
+install.packages(MuMin, dependencies = TRUE).
 
 #2. Instale e carrege o pacote 'ggplot2' e
 #em seguida procure suas vignettes.
+install.packages("ggplot2", dependencies = TRUE)
+vignette(topic='ggplot2-specs', package='ggplot2')

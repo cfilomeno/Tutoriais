@@ -26,7 +26,7 @@ minha_lista
 
 #Essa lista tem 3 dimensões
 minha_lista[[1]] #tem o vetor my_vector
-minha_lista$minha_matrix #ele pode ser chamado usando $ também
+minha_lista$minha_matriz #ele pode ser chamado usando $ também
 minha_lista[[3]] #tem o data frame
 minha_lista[c(1,3)] #primeira e terceira dimensoes
 
@@ -47,7 +47,13 @@ minha_lista$meu_df[ ,1] #Ok. Apareceu [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.
 #2. Cria uma lista, com a primeira dimensão sendo um vetor de TRUE/FALSE,
 #a segunda dimensão o data.frame iris, e na terceira um vetor com o 
 #seu nome.
-
-
+d1 <- c(T, F, T, F, F)
+d2 <- iris
+d3 <- "cleber"
+nova_lista <- list(d1,
+                   d2,
+                   d3)
+nova_lista
 #3. Modifique o nome da primeira dimensão da sua lista.
 #dica use a função names()
+names(nova_lista)[1] <- "dimensao1"
