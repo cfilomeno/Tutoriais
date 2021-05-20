@@ -76,13 +76,13 @@ boxplot(massa~sexo, ylab="massa (Kg)", xlab = "Sexo") #modificou o nome do eixo 
 
 
 #Outras funcoes que podem ser úteis:
-#?coplot() ##funcao coplot plota seu grafico com certos niveis que vc estabelece. arui usamos lat e long 
+#?coplot() ##funcao coplot plota seu grafico com certos niveis que vc estabelece. aqui usamos lat e long 
 coplot(lat ~ long | depth, data = quakes) #exemplo mostra a variacao dos seus dados em 3 dimensoes e nao 2
 
 #?dotchart() ##util para verificar dados fora do padrao e ate erros no seus dados, como erro de digitacao
 dotchart(VADeaths, main = "Death Rates in Virginia - 1940")
 
-#?abline() ##tracar uma regressao nos seus dados 
+?abline() ##tracar uma regressao nos seus dados
 #vamos acrescentar uma coluna tempo
 tempo<-c(rep(24,50), rep(25,50)) #criou um vetor tempo, com 100 num, e pediu p repetir o num 24 e 25 por 50 vezes
 tempo
@@ -102,7 +102,7 @@ abline(a=0, #interseccao
 ##13.3. Veja a ajuda em par() para plotar os dados
 #acima com outros nomes para o eixo-x e o eixo-y
 
-boxplot(dados$y~dados$x, ylab="24Y", xlab = "24X")
+boxplot(dados$y~dados$x, ylab="eixo-x", xlab = "eixo-y")
 
 
 #13.6
@@ -110,21 +110,28 @@ boxplot(dados$y~dados$x, ylab="24Y", xlab = "24X")
 #depois acrescente os pontos do segundo conjunto de 
 #dados (dados2) na cor verde
 x1<-seq(1:100)
-y1<-2*x + rnorm(n=100, mean=0, sd=mean(x)/2)
-dados1<-data.frame(y=y,x=x)
+y1<-2*x1 + rnorm(n=100, mean=0, sd=mean(x1)/2)
+dados1<-data.frame(y=y1,x=x1)
 
 x2<-seq(1:100)
-y2<-2+3*x + rnorm(n=100, mean=0, sd=mean(x)/2)
+y2<-2+3*x2 + rnorm(n=100, mean=0, sd=mean(x2)/2)
 dados2<-data.frame(y=y2,x=x2)
 
+plot(y = dados1$y, x = dados1$x, col = "blue")
+points(dados2$y, dados2$x, col="red")
 #Pesquise na função par() como plotar dois
 #gráficos lado a lado e plote os dados acima dessa forma
 #Veja:
 ?par
-
+op <- par(mfrow = c(1, 2))
+plot(y = dados1$y, x = dados1$x, col = "blue")
+plot(dados2$y~ dados2$x, col="red")
+par(op)
 
 #Descubra como mudar os limites de um gráfico
 #e plote os dados acima com o limite y de -100 a 350
 #e x de -20 a 120
 #Veja:
 ?plot.default
+plot(y = dados1$y, x = dados1$x, col = "blue", ylim = c(-100,350), xlim=c(-20,120))
+

@@ -66,22 +66,20 @@ mat<-matrix(rep(x=1,times=5*5), ncol=5,nrow=5)
 mat1<-matrix(rep(x=1,times=5*5), ncol=5,nrow=5)
 mat1
 
-for i in mat1:
+for (i in mat1) {
   
-  mat1[row(mat1) == col(mat1)]
+  mat1[row(mat1) == col(mat1)] = "diagonal"
+  
 }
-
-mat2 <- diag(x = 5, nrow=5, ncol=5, names = TRUE)
-mat2
+mat1
 
 
 #Faça um loop para encontrar o fatorial do número 11 (11*10*9*...*1)
 11*10*9*8*7*6*5*4*3*2*1
 
-
+num <- c(1:11)
 fat = 1
-for(i in 1:11){
-  fat <-fat*((1:11)[i])
+for(i in num){
+  fat <-fat*((num)[i])
 }
-print(fat)
 print(paste('O fatorial de 11 é', fat))
