@@ -98,11 +98,11 @@ library("vegan")
 
 data("BCI")
 
-#Simpson <- diversity(BCI, "simpson")
-#Simpson
-#
-#Shannon<-diversity(BCI)
-#Shannon
+Simpson <- diversity(BCI, "simpson")
+Simpson
+
+Shannon<-diversity(BCI)
+Shannon
 
 #2. Crie uma funcao para detectar se um vetor possui numeros (is.numeric()) ou caracteres (is.character()) e
 #então acrescentar um valor ou um texto (paste()) aos componentes desse vetor.

@@ -130,7 +130,7 @@ Petal.Width = -0.04822 + 0.20125 * Petal.Length -
 #
 #
 #Em relacao ao modelo predito, comparado ao intercept. O coeficiente de comprimento da pétala de setosa (intercept) = -0.04822, 
-#o valor associado ao coeficiente da petala = 0.20125; o de Speciesversicolor = -0.03607;  e o de
+#o valor associado ao coeficiente comprimento da petala = 0.20125; o de Speciesversicolor = -0.03607;  e o de
 #Speciesvirginica = 1.18425. A interacao do comprimento petala com Speciesversicolor = 0.12981 
 #e a interacao do comprimento com Speciesvirginica = -0.04095 
 #

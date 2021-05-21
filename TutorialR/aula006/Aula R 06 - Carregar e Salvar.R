@@ -76,12 +76,14 @@ meusdados.csv<-read.csv(file="meusdados.csv",
 
 #1. Escolha um conjunto de dados de seu interesse e tente abri-lo no R como um data.frame
 
-
-
+df <- iris
+df
 #2. Selecione parte desse data.frame e salve com outro nome.
-
-
+especies <- data.frame(df$Species)
+write.csv(x = especies,
+          file = "especiesiris.csv",
+          row.names = F)
 
 #3. Carregue esse data.frame que foi salvo na questão 2.
-
-
+df_especies = read.csv(file = "especiesiris.csv", sep = ",")
+df_especies

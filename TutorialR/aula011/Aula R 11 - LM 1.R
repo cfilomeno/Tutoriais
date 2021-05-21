@@ -199,11 +199,14 @@ confint(modelo_trees)
 #uma nova coluna com o log do volume e outra com o log do diâmetro (função log)
 #
 #
-#head(trees)
+head(trees)
 trees[ ,1-3] #conferi e filtrei as colunas
 log(trees[ ,1-3]) #calculei o log das colunas
 plot(log(Volume) ~ log(Girth), data = trees) #plotei a funcao
 #
+trees$logvol <- log(trees$Volume)
+trees$logdiam <- log(trees$Girth)
+plot(logvol~logdiam, data = trees)
 #
 #
 #2. Faça um modelo linear do log do Volume em função do log do diâmetro
@@ -212,6 +215,7 @@ plot(log(Volume) ~ log(Girth), data = trees) #plotei a funcao
 ex2 <- lm(formula = log(Volume) ~ log(Girth), data = trees)
 ex2 #nome abreviado do exercicio 2
 #
+modelo <- lm(logvol~logdiam, data = trees)
 #
 #
 #3. Escreva a equação do seu modelo com base no summary do seu modelo
@@ -221,7 +225,9 @@ summary(ex2)
 #Intercept = -2.35332   +/- 0.23066 (SD)
 #log(Girth) =   2.19997 +/-   0.08983 (SD)
 #
-#
+summary(modelo)
+# y = -2.35332 + 2.19997x
+
 #4. Calcule o intervalo de confiança para o coeficiente associado log do diâmetro
 #
 #
@@ -230,6 +236,7 @@ confint(ex2) # Resposta abaixo
 #Intercept   -2.825083 -1.881566
 #log(Girth)   2.016238  2.383702
 #
+confint(modelo)
 #
 #
 #5. Observe o R^2 e interprete o seu valor (veja em summary)
@@ -237,6 +244,8 @@ confint(ex2) # Resposta abaixo
 #
 #Multiple R-squared:  0.9539,	Adjusted R-squared:  0.9523 
 #
+
+
 #
 #6. Faça um plot do log da distancia de frenagem (dist) em função
 #do log da velocidade do carro (speed) dos dados contidos em  cars
@@ -247,6 +256,12 @@ cars[ ,1-2] #conferi e filtrei as colunas 1 e 2
 log(cars[ ,1-2]) #calculei o log das colunas 1 e 2
 plot(log(dist) ~ log(speed), data = cars) #plotei a funcao
 #
+
+
+cars$logdist <- log(cars$dist)
+cars$logspeed <- log(cars$speed)
+plot(logdist~logspeed, data = cars)
+
 #
 #7. Faça um modelo linear para esse dados.
 #
@@ -255,6 +270,10 @@ ex7 <- lm(formula = log(dist) ~ log(speed), data = cars)
 ex7
 #
 #
+
+modelo7 <- lm(logdist ~ logspeed, data = cars)
+abline(modelo7, col = "red")
+
 #
 #8. Escreva a equação  com base no summary do seu modelo
 #
@@ -263,7 +282,10 @@ summary(ex7)
 #Intercept =    -0.7297    +/-  0.3758 
 #log(speed) =    1.6024    +/- 0.1395
 #
-#
+
+summary(modelo7)
+# y = -0.7297 + 1.6024x
+
 #9. Calcule o intervalo de confiança para
 #o coeficiente associado ao log da velocidade
 #
@@ -275,6 +297,11 @@ confint(ex2)
 #log(Girth)   2.016238  2.383702
 #
 #
+confint(modelo7)
+
+#                  2.5 %     97.5 %
+#     (Intercept) -1.485357 0.02601964
+#     logspeed     1.321832 1.88295038
 #
 #10. Imagine um estudo controlado, duplo cego, para duas drogas para combater a COVID-19.
 #O resultado indica que em relação ao grupo controle (sem medicação) a primeira droga tem uma taxa de internação
