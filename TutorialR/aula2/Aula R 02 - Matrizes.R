@@ -53,6 +53,7 @@ mat <- cbind(mat , v1)
 v2<-c(10,10,10,10)
 mat<-rbind(mat,v2)
 
+matrix(data, nrow = rows, ncol = cols)
 #Selecionando elementos de uma matriz.
 #Selecione os elementos na linha 2 e coluna 3
 mat[2,3]
@@ -101,17 +102,26 @@ mat1 %*% mat2 #este e um processo diferente do anterios, utilizaremos este no fu
 ###EXERCICIOS####
 ###EXERCICIOS####
 #1. Crie uma matriz com 10 colunas e 3 linhas
-
+mat = matrix(nrow = 3, ncol = 10)
+mat[,] = 2:31
+mat
 #2. Use a função t() para transpor a matriz
-
+t(mat)
 #3. Quantas linhas e colunas ela tem agora?
+# R: mat tem 3 colunas e 10 linhas
 
 #4. Extraia da matriz um vetor com a segunda coluna
-
+vet <- mat[,2]
+vet
 #5. Multiplique apenas a segunda coluna por 3
-
+3*mat[,2]
 #6. Extria apenas o triangulo inferior da matriz. Dica: veja ?lower.tri
-
+?lower.tri
+lower.tri(mat)
 #7. Crie uma matrix de 2 linhas e 3 com apenas nomes
-
+mat2 <- matrix(nrow=2,ncol=3)
+rownames(mat2) <- c("vermelho", "azul")
+colnames(mat2) <- c("preto", "rosa", "verde")
+mat2
 #8. Substitua o componente da linha 1 coluna 1 por "Zoologia"
+mat2[1,1] <- "Zoologia"

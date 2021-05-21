@@ -116,34 +116,47 @@ resultado
 ###EXERCICIOS####
 ###EXERCICIOS####
 #1. Crie dois vetores, cada um com 10 números.
-
+vet1 = c(4,3,67,9,7,5,1,43,54,22)
+vet2 = c(76,4,3,123,6,875,99,143,65,2)
 #2. Calcule a divisão do vetor 1 pelo 2.
-
+res = vet1/vet2
+res
 #3. Calcule a soma total dos componentes
 #de cada um dos vetores
 #dica: use a função sum()
 ?sum
+soma_vet1 = sum(vet1)
+soma_vet1
 
+soma_vet2 = sum(vet2)
+soma_vet2
 #4. Teste se a soma total do vetor 1 
 #é maior do que a do vetor 2. #Veja o resultado no console.
 #dica: use > ou < 
+soma_vet1 > soma_vet2
+soma_vet1 < soma_vet2
 
 #5 teste se eles sao iguais.
 #dica use ==
-
+soma_vet1 == soma_vet2
 #6. Selecione o primeiro componente vetor1
-
+vet1[1]
 #7.Selecione o terceiro componente
-
+vet1[3]
 #8.Selecione o terceiro e o quinto componente
-
+vet1[c(3,5)]
 #9. Atribua nomes a um vetor e selecione um
 #componente pelo nome, não pela posição como acima.
-
+names(vet1) <- c("primeiro", "segundo", "terceiro", "quarto", "quinto",
+                 "sexto", "sétimo", "oitavo", "nono", "décimo")
+vet1["quarto"]
 #10 selecione componentes de um vetor que
 #sejam maiores ou iguais (>=) a um determinado valor.
 #atribua isso a outro vetor.
-
+maior_igual <- vet1 > 20
+maior_igual
 #11. Selecione os componentes do vetor com base no
 #resultado de um teste lógico (==, !=, >, <, >=, <=)
 #de outro vetor.
+idade <- vet1[vet1 > 20]
+idade

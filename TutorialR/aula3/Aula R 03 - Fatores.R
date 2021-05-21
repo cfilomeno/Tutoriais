@@ -26,7 +26,7 @@ sexo #veja no console que há dois niveis nivel femea e macho
 #Veja ?factor
 tamanho <- c("grande", "grande", "pequeno", "pequeno", "medio") ##nao usar sinais e acentos
 
-#?factor ##ajuda mostrando o x ##colocar os niveis em ordem crescente P,M,G e colocar 'ordered = True'
+# ?factor ##ajuda mostrando o x ##colocar os niveis em ordem crescente P,M,G e colocar 'ordered = True'
 tamanho<-factor(x = tamanho,
                 levels = c("pequeno","medio","grande"),
                 ordered = TRUE)
@@ -46,8 +46,9 @@ temp <- c("High", "Low", "High","Low", "Medium")
 factor_temp <- factor(x=temp,
                       ordered = TRUE, #isso e para ordenar
                       levels = c("Low", "Medium", "High"))
-
+factor_temp
 #Selecione os valores de factor_temp que são maiores
 #do que Low. Dica: use a mesma sintaxe que você usou
 #nos vetores.
-
+new <- factor_temp[factor_temp > "Low"]
+new
