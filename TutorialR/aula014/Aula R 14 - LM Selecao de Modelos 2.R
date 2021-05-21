@@ -74,13 +74,13 @@ RIKZ_model.2<-lm(log.Richness ~ grainsize + humus + week,
                  data = RIKZ)
 anova(RIKZ_model.1,RIKZ_model.2, test="F") #comparando modelos 2 e 1
 
-#grainsize 0.3609 0.5516
+#grainsize 0.3609 0.5516. Valor de p alto: não significativo para explicar o log.Richness
 RIKZ_model.3<-lm(log.Richness ~ NAP + humus + week, 
                  data = RIKZ)
 anova(RIKZ_model.1,RIKZ_model.3, test="F") #comparando modelos 1 e 3
 
 
-#humus 1.2295 0.2745
+#humus 1.2295 0.2745. Também valor maior que 0.05: humus não significativo
 RIKZ_model.4<-lm(log.Richness ~ NAP + grainsize + week, 
                  data = RIKZ)
 anova(RIKZ_model.1,RIKZ_model.4, test="F") #comparando modelos 1 e 4
@@ -94,19 +94,19 @@ anova(RIKZ_model.1,RIKZ_model.5, test="F") #comparando modelos 1 e 5
 
 #Agora esse é o modelo:
 #Comeca tudo de novo
-#NAP 57.124 3.717e-09 ***
+# modelo3 comparado com modelo sem NAP 57.124 3.717e-09 ***
 RIKZ_model.3<-lm(log.Richness ~ NAP + humus + week, 
                  data = RIKZ)
 RIKZ_model.5<-lm(log.Richness ~ humus + week, 
                  data = RIKZ)
 anova(RIKZ_model.3,RIKZ_model.5, test="F")
 
-#week 
+# não tem week 
 RIKZ_model.7<-lm(log.Richness ~ NAP + humus, 
                  data = RIKZ)
 anova(RIKZ_model.3,RIKZ_model.7, test="F")
 
-#humus #1.1427 0.2917
+#não tem humus #1.1427 0.2917
 RIKZ_model.8<-lm(log.Richness ~ NAP + week, 
                  data = RIKZ)
 anova(RIKZ_model.3,RIKZ_model.8, test="F")

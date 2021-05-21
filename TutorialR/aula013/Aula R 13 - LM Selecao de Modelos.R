@@ -43,8 +43,9 @@ anova(modelo_sepal_1, modelo_sepal_2, test="F")
 #O primeiro modelo tem uma suma dos quadrados dos resíduos (RSS)
 #de 16.962, com 147 GL para os resíduos.
 
-#O que são os resíduos?
+#O que são os resíduos? R: variância não explicada pelo modelo
 plot(iris$Sepal.Width)
+#segments é a média geral
 segments(x0=1,
          x1=1150,
          y0=mean(iris$Sepal.Width[1:150]),
@@ -199,7 +200,7 @@ data("PlantGrowth")
 #modelo_PGLM <- lm(weight ~ group, data = PlantGrowth)
 #
 #modelo_PGLM 
-#plot(weight ~ group, data = PlantGrowth)
+plot(weight ~ group, data = PlantGrowth)
 #
 #summary(modelo_PGLM)
 #
@@ -244,6 +245,5 @@ dredge(modelo_pg_1, rank = "AICc")
 #
 #plot(modelo_pg_1)
 #plot(modelo_pg_2)
-#coplot (modelo_pg_1 ~ modelo_pg_2)
 #
 #
