@@ -1,0 +1,4 @@
+	artrop.1	artrop.2	artrop.3	artrop.4	artrop.5	artrop.6	artrop.7	artrop.8	artrop.9	artrop.10	artrop.11	artrop.12	artrop.13	artrop.14	artrop.15	artrop.16	artrop.17	artrop.18	artrop.19	artrop.20
+Bromelia.sp1.P	3	0	0	0	0	121	0	2	0	10	0	0	0	0	0	0	0	0	4	0
+Bromelia.sp1.M	12	0	0	0	0	102	0	10	5	19	0	0	0	1	0	1	0	0	4	0
+Bromelia.sp1.G	8	1	0	0	0	10	2	9	8	12	1	1	2	1	1	2	1	1	4	0

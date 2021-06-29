@@ -1,0 +1,44 @@
+# Indval - Species Indicador Values Index (pacote "labdsv")
+
+library(labdsv)# Ler o pacote que contém a função que roda o IndVal
+ind=read.table("SeuArquivo.txt", header=T)# ler arquivo txt que esteja na mesma pasta do RData
+ind #conferir se os dados estão ok
+grupo=ind[,1]# definir sua variável que categórica (grupo)
+grupo #conferir se os dados estão ok
+sp=ind[,-1] # definir as colunas restantes como "espécies"
+sp #conferir se os dados estão ok
+result=indval(sp,grupo)
+summary(result)
+str(result)
+result$maxcls
+result$indcls
+result$pval
+index.value=cbind(result$maxcls,result$indcls,result$pval
+resultado
+colnames(resultado)<-c("maxgrp", "ind. value","P")
+resultado
+
+#RDA
+
+# 11 - RDA
+
+library(vegan)
+matriz.X=read.table("abioticos.txt", header = TRUE)
+matriz.X
+matriz.Y=read.table("bioticos.txt", header = TRUE)
+matriz.Y
+rda.exemplo=rda(matriz.Y,matriz.X, scan = FALSE)
+rda.exemplo
+summary(rda.exemplo)
+plot(rda.exemplo)
+scores(rda.exemplo, choices=c(1,2), display=c("sp","wa","lc","bp"), scaling=2)->escores
+
+# "wa" = Scores that are derived from the scores of sp
+# "lc" = Scores that are linear combinations of var
+# "bp" = Biplot Scores
+escores
+escores$species
+escores$sites
+escores$constraints
+escores$biplot
+cor(escores$sites,escores$constraints) # These are standard correlation coefficients between sample scores for an axis derived from the species data (the WA scores) and the sample scores that are linear combinations of the environmental variables (the LC scores)

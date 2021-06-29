@@ -1,0 +1,7 @@
+	sp1	sp2	sp3	sp4	sp5	sp6	sp7	sp8	sp9	sp10	sp11	sp12	sp13	sp14	sp15
+mata.atlantica1	68	3	1	2	2	2	3	5	4	1	1	2	3	2	1
+mata.atlantica2	7	7	7	7	7	7	7	7	7	7	6	6	6	6	6
+mata.atlantica3	86	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+mata.atlantica4	99	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+mata.atlantica5	20	20	20	20	20	0	0	0	0	0	0	0	0	0	0
+mata.atlantica6	1	7	12	13	19	1	27	3	2	2	3	3	3	2	2

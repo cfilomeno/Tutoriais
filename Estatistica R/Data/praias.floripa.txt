@@ -1,0 +1,7 @@
+	peixe.sp1	peixe.sp2	peixe.sp3	peixe.sp4	peixe.sp5	peixe.sp6	peixe.sp7	peixe.sp8	peixe.sp9	peixe.sp10	peixe.sp11	peixe.sp12	peixe.sp13	peixe.sp14	peixe.sp15	peixe.sp16	peixe.sp17	peixe.sp18	peixe.sp19	peixe.sp20	peixe.sp21	peixe.sp22	peixe.sp23	peixe.sp24	peixe.sp25	peixe.sp26	peixe.sp27	peixe.sp28	peixe.sp29
+Praia.A	60	48	42	40	39	32	30	29	21	20	19	19	18	17	16	16	15	13	12	11	11	10	9	9	8	7	6	5	5
+Praia.B	121	30	12	11	2	2	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Praia.C	44	39	49	12	37	50	12	27	39	13	1	1	2	44	39	33	1	2	1	2	4	0	0	0	0	0	0	0	0
+Praia.D	21	15	12	11	1	0	0	0	14	66	78	48	59	13	63	55	51	13	12	1	2	27	21	0	0	0	12	0	1
+Praia.E	100	101	99	45	39	19	20	2	33	39	91	81	40	60	61	12	2	9	0	0	0	0	14	9	9	10	12	11	9
+Praia.F	1	1	10	0	0	0	24	23	18	18	33	31	39	42	10	0	0	0	0	0	0	33	0	31	0	0	0	2	0
