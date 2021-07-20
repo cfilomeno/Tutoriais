@@ -20,7 +20,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="235338d6-81ec-4647-89e6-64abd94ab5f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../site2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../site2/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../site2/app/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../site2/app/controllers/default.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../site2/app/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../site2/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/Execícios curso em vídeo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Tutorial Python/Execícios curso em vídeo/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/.idea/site2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/.idea/site2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/css/starter-template.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/css/starter-template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/static/plot_Cu2teste.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/static/plot_Cu2teste.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/page2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/page2b.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/page2b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/templates/teste.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/templates/teste.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/C01_df2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/C01_df2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/Cu2" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/Cu2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/Cu2teste" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/Cu2teste" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/LCCu1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/LCCu1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/TiO2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/TiO2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../site2/uploads/TiO2_copia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../site2/app/uploads/TiO2_copia.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../site3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../site3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../site3/.idea/site2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../site3/.idea/site2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../site3/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../site3/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../site3/work.code-workspace" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

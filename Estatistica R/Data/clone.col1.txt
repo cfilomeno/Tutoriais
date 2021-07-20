@@ -1,0 +1,4 @@
+	acaro1	acaro2	acaro3	acaro4	acaro5	acaro6	acaro7	acaro8	acaro9	acaro10	acaro11	acaro12	acaro13	acaro14	acaro15	acaro16	acaro17	acaro18	acaro19	acaro20
+CloneX1	1	23	2	22	11	9	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+CloneX2	0	0	0	0	0	1	43	2	3	4	4	34	19	0	0	0	0	0	0	0
+CloneX3	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	1	1	1	1	1

@@ -1,0 +1,16 @@
+	Area	Spider.Richness
+Ilha1	50	20
+Ilha2	90	21
+Ilha3	100	31
+Ilha4	140	40
+Ilha5	180	39
+Ilha6	221	51
+Ilha7	410	71
+Ilha8	414	78
+Ilha9	510	82
+Ilha10	589	88
+Ilha11	700	101
+Ilha12	808	131
+Ilha13	991	150
+Ilha14	1090	171
+Ilha15	1210	201

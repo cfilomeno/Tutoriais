@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>DRX-pó</title>
+    <script src="http://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js"></script>
+
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+    <div class="buttonHolder">
+        <input type="file" name="file" id="search"><br/><br/>
+        <button type="submit" class="btn btn-primary">Plotar gráfico</button>
+    </div>
+
+    </form>
+<hr>
+
+
+            {{ script|safe}}
+        <div style="margin: 0; text-align: center">
+            {{ div|safe }}
+        </div>
+
+
+
+
+    <footer>
+        <p>&copy; Filomeno</p>
+    </footer>
+
+{% endblock %}
