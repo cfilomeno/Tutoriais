@@ -165,7 +165,7 @@ summary(Mlme2)
 #Efeito de tratamentos no solo na densidade de bacterias
 #nas folhas. Medidas varias folhas por planta
 library(nlme)
-Ch12<-read.csv("Ch12.csv", dec=".")
+Ch12<-read.csv("ch12.csv", dec=".")
 names(Ch12)
 micro<-data.frame(density = Ch12$DENSITY,
                   plant = Ch12$PLANT, treatment = Ch12$TREATMNT)
@@ -262,20 +262,33 @@ summary(Mlme)
 #Uma possibilidade eh a presenca de esporos em adultos
 
 #Variaveis
-#LSpobee = log10 + 1 da contagem de esporos em adultos (variavel resposta)
-#fInfection01 = se a colonia esta infectada (1) ou nao (0)
-#BeesN =  numero de abelhas da colonia
-#Hive - Colonia analisada (sao tres amostras por colonia)
+# LSpobee = log10(Spobee) + 1 da contagem de esporos em adultos (variavel resposta)
+# fInfection01 = se a colonia esta infectada (1) ou nao (0)
+# BeesN =  numero de abelhas da colonia
+# Hive - Colonia analisada (sao tres amostras por colonia)
 
 #comecem com o modelo 
 #LSpobee ~ fInfection01 * BeesN
 
-Bees<-read.csv("Bees.csv")
-Bees$fHive<-factor(Bees$fHive)
-Bees$fInfection01<-factor(Bees$fInfection01)
+# Bees<-read.csv("Bees.csv")
+Bees<-read.table("Bees.txt", header = TRUE) # o arquivo é txt e não csv
+Bees$LSpobee = log(Bees$Spobee) + 1 # log10 do vetor Spobee + 1
+Bees <- Bees[is.finite(rowSums(Bees)),] # remove as linhas com valor indefinido (-Inf) de log de zero.
+
+Bees$fHive<-factor(Bees$Hive) # coloca as 24 hives (colmeias) como categórico
+
+Bees$fInfection01<-Bees$Infection # cópia do vetor Infetion original
+Bees$fInfection01[Bees$fInfection01 > 1] <- 1 # substitui os valores 2 e 3 de infection como 1, para formar infection 0 e 1 apenas.
+Bees$fInfection01<-factor(Bees$fInfection01) # define as duas categorias (0 e 1)
+
+
 
 dev.off()
 boxplot(LSpobee ~ fInfection01, data = Bees, varwidth = TRUE)
+
+dotchart(Bees$LSpobee, groups=as.factor(Bees$fInfection01),
+         xlab = "Infection",
+         ylab = "Order of the data")
 
 
 M1 <- lm(LSpobee ~ fInfection01 * BeesN, data = Bees)
@@ -298,6 +311,9 @@ M2<-gls(LSpobee ~ fInfection01 * BeesN, data = Bees)
 M3<-lme(LSpobee ~ fInfection01 * BeesN,
         random =~ 1 | fHive, data = Bees)
 anova(M2,M3)
+library(MuMIn)
+AICc(M2, M3)
+
 
 summary(M3)
 insp.plot(M3,
@@ -318,6 +334,8 @@ M6<-lme(LSpobee ~ fInfection01 * BeesN,
         random =~ 1 | fHive,
         weights = varIdent(form =~ 1 | fInfection01), data =  Bees)
 anova(M3,M6)
+AICc(M3, M6)
+
 
 dev.off()
 insp.plot(M6,

@@ -29,7 +29,9 @@
 
 setwd(dir ="/home/laura/Documentos/Introdução ao R Studio")
 
-fertil<-read.csv("fertilizante.csv", dec=".")
+table(fertil$FERTIL)
+fertil <- read.csv("fertizante.csv", dec=".")
+
 head(fertil)
 fertil$FERTIL<-as.factor(fertil$FERTIL)
 plot(YIELD~FERTIL, data=fertil)
@@ -89,7 +91,7 @@ modelfertil2<-lm(sqrt.fertil ~ fertil$FERTIL)
 insp.plot(modelfertil2, data=fertil[,"FERTIL"])
 
 library(MuMIn)
-AICc(model, modelfertil)
+AICc(model, modelfertil, modelfertil2)
 
 
 log.fertil<-log(fertil$YIELD)

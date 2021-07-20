@@ -18,8 +18,8 @@
 #modelvalidation (arquivo está no aprender)
 library(modelvalidation)
 
-#install.packages("~/Downloads/modelvalidation_0.3.0.tar", repos = NULL,
-#                 type="source")
+install.packages("~Downloads/modelvalidation_0.4.0.tar", repos = NULL,
+                type="source")
 
 #Formula de um modelo linear
 #Y_i = a + bX_i + erro_i
@@ -60,14 +60,24 @@ plot(model1)
 library(modelvalidation)
 ?insp.plot
 insp.plot(model1, data=data[,"X"])
-
+# histograma dos resíduos (testa os pressupostos da normalidade). Se o hist dos resíduos
+# tem aspecto de curva normal, significa alta probabilidade de seguir os pressupostos norm
+# qqplot: se os resíduos próximos à linha vermelha, seguem distribuição normal
+# a normalidade é o pressuposto menos importante. Pode-se aceitar pequenos desvios.
+# resíduos pelos valores preditos (ordi res X fitted): devem estar distribuídos para mais
+# e menos perto do zero.
+# ord res X data: 
+# distancia de cook: estima a importancia de cada ponto dos dados para a estimativa.
+# ACF: função de autocorrelação. Quão relacionados são os resíduos a medida que aumenta dist
 
 #Rodar a linha 61 para ver seus plots em diferendes graficos
 #PLOTS:
 #1: Histograma dos resíduos = normalidade
 
-#2: quantile-quantile plot (qq plot) = normalidade  ##1 Parentese normalidade e um dos pressupostos que nao e tao imporante, e continua em ##2
-#o valor de y está na distribuição dos resíduos. ## 2 se conserguir desvio normal e melhor, mas se nao tiver nao significa que esta errado
+#2: quantile-quantile plot (qq plot) = normalidade  ##1 Parentese normalidade 
+# e um dos pressupostos que nao e tao imporante, e continua em 
+    ##2 #o valor de y está na distribuição dos resíduos. #
+    # 2 se conserguir desvio normal e melhor, mas se nao tiver nao significa que esta errado
 #y são os valores dos resídos. x em qual quartil
 #a reta são os valores esperados tendo
 #em vista um distribuicao normal com média 0
@@ -118,9 +128,12 @@ plots.insp.sim(insp.sim=sim,
                data=lapply(sim,extract.data),
                ask=FALSE)
 
-
-
-
+# ord. residuals: em azul, dados reais. Outros: dados simulados.
+# qqplot: semelhança? resíduos com distr normal
+# resdi x fitted: dentro da variação natural?
+# resid x X: alguma variação que mostre problema?
+# cook's distance:
+# ACF: 100% para dados reais.
 
 #Exercícios
 #Exercícios
@@ -134,19 +147,22 @@ X<-rnorm(n=100)
 X<-X[order(X)]
 Y<-NULL
 for (i in 1:length(X)) {
-  Y[[i]]<-0.1+1.2*X[[i]]+rnorm(n=1,mean=0,sd=i/50)
+  Y[i]<-0.1+1.2*X[i]+rnorm(n=1,mean=0,sd=i/50)
 }
+data <- data.frame(X, Y)
 model1f<-lm(Y~X, data=data)
 #
 plot(model1f)
+
 #
+plot(Y~X, data=data)
 residuals(model1f) ##funcao extrai os residuos. o Y que vc encontrou menos o  dos residuos
 points(fitted(model1f)~X, data=data, col="red") ##fitted extrai os valores preditos
 qqnorm(residuals(model1f)) ##funcao para testar normalidade destes residuos
 acf(model1f) ##funcao de testar autocorrelacao
 plot(model1f, which = 4) 
 #
-insp.plot(model1f, data=data[,"x1"])
+insp.plot(model1f, data=data[,"X"])
 #
 #
 sim<-insp.sim(model1f)
@@ -211,7 +227,9 @@ plots.insp.sim(insp.sim=sim,
                fitted=lapply(sim,fitted), ##filtrar
                data=lapply(sim,extract.data),
                ask=FALSE)
-#
+# Ord. residuals: resíduos segue distribuição normal: OK
+# qqplot: ok
+# função de autocorrelação ACF com problema? dados reais decaem com aumento de lag
 insp.plot(modelf2)
 #
 #Resultados dos graficos:
@@ -249,3 +267,11 @@ plot(modelfertil, which = 2)
 #
 insp.plot(modelfertil)
 #
+
+sim<-insp.sim(modelfertil)
+head(sim)
+plots.insp.sim(insp.sim=sim,
+               resid=lapply(sim,extract.resid), ##extrair os residuos
+               fitted=lapply(sim,fitted), ##filtrar
+               data=lapply(sim,extract.data),
+               ask=FALSE)
