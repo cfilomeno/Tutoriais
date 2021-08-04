@@ -1,25 +1,25 @@
 =============================================
-##OS TIPOS DE OBJETO: CRIAÇÃO E MANIPULAÇÃO##
+##OS TIPOS DE OBJETO: CRIA??O E MANIPULA??O##
 =============================================
 
-###Vetor numérico###
+###Vetor num?rico###
 ********************
 
 a<-1
 
 c(1,2,3,4,5)->b
 
-dados.campo=seq(1,10,2)   #cria uma sequência de números de 1 até 10 de 2 em 2
+dados.campo=seq(1,10,2)   #cria uma sequ?ncia de n?meros de 1 at? 10 de 2 em 2
 
-x=seq(3,10)   #cria seq de 3 até 10
+x=seq(3,10)   #cria seq de 3 at? 10
 
-sample(x, 2, replace=T)   #sorteia dois números do vetor x, com reposição do número sorteado
+sample(x, 2, replace=T)   #sorteia dois n?meros do vetor x, com reposi??o do n?mero sorteado
 
-mata.1=rep(1:2,c(10,3))   #repete o número 1 dez vezes e o número 2 três vezes
+mata.1=rep(1:2,c(10,3))   #repete o n?mero 1 dez vezes e o n?mero 2 tr?s vezes
 
-exemplo=c(1:10)   #cria uma seq de 1 até 10
+exemplo=c(1:10)   #cria uma seq de 1 at? 10
 
-length(exemplo)   #dá o número de itens do vetor
+length(exemplo)   #d? o n?mero de itens do vetor
 
 
 ###Vetor de caracter###
@@ -28,44 +28,44 @@ length(exemplo)   #dá o número de itens do vetor
 dados.pessoais=c(nome="fulano", nascimento="08/10/1934", estadocivil="solteiro")
 dados.pessoais
 
-###Vetor lógico###
+###Vetor l?gico###
 ******************
 
-is.factor(x)   #diz se x é fator (FALSE)
+is.factor(x)   #diz se x ? fator (FALSE)
 
-is.matrix(x)   #diz se x é uma matriz (FALSE)
+is.matrix(x)   #diz se x ? uma matriz (FALSE)
 
-is.vector(x)   #diz se x é um vetor (TRUE)
+is.vector(x)   #diz se x ? um vetor (TRUE)
 
 a<-1
-a<1   # 'a' é menor que 1? (FALSE)
-a==1   # 'a' é igual a 1? (TRUE) **utilizar dois símbolos de igual(=) para que não seja criado um novo objeto com o nome 'a'
-a>=1   # 'a' é maior e/ou igual a 1? (TRUE)
-a!=2   #o objeto 'a' não é igual a dois? (TRUE) (!=negação)
+a<1   # 'a' ? menor que 1? (FALSE)
+a==1   # 'a' ? igual a 1? (TRUE) **utilizar dois s?mbolos de igual(=) para que n?o seja criado um novo objeto com o nome 'a'
+a>=1   # 'a' ? maior e/ou igual a 1? (TRUE)
+a!=2   #o objeto 'a' n?o ? igual a dois? (TRUE) (!=nega??o)
 
 ###Fator###
 ***********
 
-dados=c("baixo", "menos baixo", "médio", "alto")   #cria um vetor com variáveis categóricas
+dados=c("baixo", "menos baixo", "m?dio", "alto")   #cria um vetor com vari?veis categ?ricas
 
 as.factor(dados)   #transforma o vetor num fator
 
-is.factor(dados)   #testa a conversão
+is.factor(dados)   #testa a convers?o
 
 ###Matriz###
 ************
 
-xy=matrix(1:12, nrow=3)   #cria uma matriz de 3 linhas, com números de 1 a 12 
+xy=matrix(1:12, nrow=3)   #cria uma matriz de 3 linhas, com n?meros de 1 a 12 
 
-rownames(xy)=LETTERS[1:3]   #renomeia as linhas com as letras A, B e C em maiúsculas (LETTERS)
+rownames(xy)=LETTERS[1:3]   #renomeia as linhas com as letras A, B e C em mai?sculas (LETTERS)
 
 colnames(xy)=c("mata.1", "mata.2", "mata.3", "mata.4")   #renomeia as colunas com os nomes mata.1, mata.2.....
 
 xy
 
-t(xy)   #transpõe a matriz
+t(xy)   #transp?e a matriz
 
-class(xy)  #mostra o que é o objeto xy (matrix)
+class(xy)  #mostra o que ? o objeto xy (matrix)
 
 xy[,1]   #acessa a primeira coluna da matriz
 
@@ -74,8 +74,8 @@ xy[1,]   #acessa a primeira linha da matriz
   	#### As chaves significam [linha, coluna]
 
 head(xy)   #acessa as primeiras linhas da matriz
-								####útil para matrizes muito extensas
-tail(xy)   #acessa as últimas linhas da matriz
+								####?til para matrizes muito extensas
+tail(xy)   #acessa as ?ltimas linhas da matriz
 
 fix(xy)   #edita uma matriz ou data frame
 
@@ -87,12 +87,12 @@ summary(xy)   #fornece um resumo do objeto
 ###Data frame### (semelhante a uma matriz, mas aceita vetores de tipos diferentes)
 ****************
 
-comunidade= data.frame(especies=c("D.nanus", "S.alter", "I.guentheri", "A.callipygius"), habitat=factor(c("Folhiço",
- "Arbóreo", "Riacho", "Poça")), altura=c(1.1, 0.8, 0.9, 1), distancia=c(1, 1.7, 0.6, 0.2))
+comunidade= data.frame(especies=c("D.nanus", "S.alter", "I.guentheri", "A.callipygius"), habitat=factor(c("Folhi?o",
+ "Arb?reo", "Riacho", "Po?a")), altura=c(1.1, 0.8, 0.9, 1), distancia=c(1, 1.7, 0.6, 0.2))
 
 as.data.frame(xy)   #converte num data frame
 
-class(xy)   #testa a conversão
+class(xy)   #testa a convers?o
 
 str(comunidade)   #avalia a estrutura do objeto
 
@@ -112,30 +112,30 @@ Lista.ex$name   #extrai parte da lista (a parte depois do $)
 ###################################################################################################################
 
 ====================================
-##IMPORTAÇÃO E EXPORTAÇÃO DE DADOS##
+##IMPORTA??O E EXPORTA??O DE DADOS##
 ====================================  
   
-#Exercício 1#
+#Exerc?cio 1#
 *************
 ?rnorm
 
-a=rnorm(30, mean=1, sd=2.5)   #cria um conjunto de dados com distribuição normal, 30 unidades, média = 1 e desvio-padrão = 2.5
+a=rnorm(30, mean=1, sd=2.5)   #cria um conjunto de dados com distribui??o normal, 30 unidades, m?dia = 1 e desvio-padr?o = 2.5
 b=rnorm(30, mean=1, sd=2.5)
 
 ?t.test
 
 t.test(a,b)   #realiza um teste t entre os conjuntos 'a' e 'b'
 
-#Exercício 2#
+#Exerc?cio 2#
 *************
 
 vetor1=c(1,3,5,6,4,2,7)
 
-vetor2=c(seq(1,32))   #cria uma sequência de 1 a 32
+vetor2=c(seq(1,32))   #cria uma sequ?ncia de 1 a 32
 
-vetor3=c(seq(1,32,2))   #cria uma sequência de 1 a 32 de 2 em 2
+vetor3=c(seq(1,32,2))   #cria uma sequ?ncia de 1 a 32 de 2 em 2
 
-vetor4=c(980:345)   #cria uma sequência decrescente de 980 a 345
+vetor4=c(980:345)   #cria uma sequ?ncia decrescente de 980 a 345
 
 ###2_a
 a=length(vetor1)   #calcula o comprimento do vetor1
@@ -155,14 +155,14 @@ m2=a2/b
 m3=a3/c
 m4=a4/d
 
-#Exercício 3#
+#Exerc?cio 3#
 *************
 m13=mean(vetor1)
 m23=mean(vetor2)
 m33=mean(vetor3)
 m43=mean(vetor4)
 
-#Exercício 4#
+#Exerc?cio 4#
 *************
 dados.campo=seq(1,10,2)
 
@@ -170,7 +170,7 @@ dados.campo=seq(1,10,2)
 dados.campo[1:5]   #seleciona os cinco primeiro elementos
 
 ###4_b
-dados.campo [-(1:2)]   #seleciona todos com exceção dos dois primeiros
+dados.campo [-(1:2)]   #seleciona todos com exce??o dos dois primeiros
 
 ###4_c
 dados.campo[3]   #seleciona o terceiro elemento
@@ -178,22 +178,22 @@ dados.campo[3]   #seleciona o terceiro elemento
 ###4_d
 dados.campo[(dados.campo<4)]   #seleciona os elementos menores que 4
 
-#Exercício 5#
+#Exerc?cio 5#
 *************
 
-ex5=seq(1,20)   #cria uma sequência de 1 até 20
-l1=letters[ex5]   #transforma os números em letras, na sequência do alfabeto
+ex5=seq(1,20)   #cria uma sequ?ncia de 1 at? 20
+l1=letters[ex5]   #transforma os n?meros em letras, na sequ?ncia do alfabeto
 
-#Exercício 6#
+#Exerc?cio 6#
 *************
 l2=LETTERS[ex5]
 
-#Exercício 7#
+#Exerc?cio 7#
 *************
 
 cbind(l1,l2)   #une os dois vetores
 
-#Exercício 8#
+#Exerc?cio 8#
 *************
 xy=matrix(1:12, nrow=3)
 
@@ -210,84 +210,84 @@ xy[3,1]   #acessa o elemento da terceira linha e primeira coluna
 ###################################################################################################################
 
 ==========================================
-##CRIAÇÃO E MANIPULAÇÃO DE GRÁFICOS NO R##
+##CRIA??O E MANIPULA??O DE GR?FICOS NO R##
 ==========================================
 
-#Exercício 1#
+#Exerc?cio 1#
 *************
 
 library("lattice")# carrega o pacote lattice
-data(quakes)  #carrega o dado "quakes", que já está no pacote
+data(quakes)  #carrega o dado "quakes", que j? est? no pacote
 head(quakes)
-xyplot(lat~long, data=quakes)	#plota a latitude em função da longitude, retirando os dados de "quakes"
+xyplot(lat~long, data=quakes)	#plota a latitude em fun??o da longitude, retirando os dados de "quakes"
 
-#Exercício 2#
+#Exerc?cio 2#
 *************
 
 library(MASS)
 data(melanoma)
 head(melanoma)
-plot(melanoma$incidence, melanoma$year, cex=24,xlab="Frequência", ylab="Anos",bty="L", data=melanoma)
-	# plota a incidência de melanoma em função dos anos
+plot(melanoma$incidence, melanoma$year, cex=24,xlab="Frequ?ncia", ylab="Anos",bty="L", data=melanoma)
+	# plota a incid?ncia de melanoma em fun??o dos anos
 	# cex muda o tamanho dos pontos
 	# xlab e ylab renomeiam os eixos
 	# bty="L" retira as bordas direita e superior
 
-#Exercício 3#
+#Exerc?cio 3#
 *************
 
-a=c(1,3,4,5,6)  # cria um vetor com o conjunto entre parênteses
+a=c(1,3,4,5,6)  # cria um vetor com o conjunto entre par?nteses
 b=c(2,2,4,5,7)
 plot(a,b)	
-rl=lm(a~b)	# calcula uma regressão de 'a' em função de 'b'
-abline(rl)	# plota no gráfico a reta ajustada à regressão
+rl=lm(a~b)	# calcula uma regress?o de 'a' em fun??o de 'b'
+abline(rl)	# plota no gr?fico a reta ajustada ? regress?o
 
 
-#Exercício 4#
+#Exerc?cio 4#
 *************
 
-dados=rnorm(1000,0,1)	#cria um conjunto de dados com 1000 números, média igual a zero e desvio padrão igual a 1
-hist(dados,xlab="Observações", ylab="Frequência", col="gray")
+dados=rnorm(1000,0,1)	#cria um conjunto de dados com 1000 n?meros, m?dia igual a zero e desvio padr?o igual a 1
+hist(dados,xlab="Observa??es", ylab="Frequ?ncia", col="gray")
 
 ##a)
-points(mean(dados),0,pch=21,bg="red")	## plota a média do conjunto 'dados' (eixo x)
-							## o número zero corresponde ao local no eixo y onde vai ser colocado o ponto
-							## 'pch' especifica o tipo de símbolo a ser utilizado (para maiores detalhes verificar em ?points)
-							## 'bg' escolhe a cor a ser utilizada no preenchimento do símbolo quando este é aberto
+points(mean(dados),0,pch=21,bg="red")	## plota a m?dia do conjunto 'dados' (eixo x)
+							## o n?mero zero corresponde ao local no eixo y onde vai ser colocado o ponto
+							## 'pch' especifica o tipo de s?mbolo a ser utilizado (para maiores detalhes verificar em ?points)
+							## 'bg' escolhe a cor a ser utilizada no preenchimento do s?mbolo quando este ? aberto
 
 ##b)
 points(quantile(dados,c(0.05,0.95)),c(0,0),pch=25,bg="green")	## plota os quantis (em y=0 para os dois)
 
 ##c e d)
-legend("topleft",c("média", "quantis"), pch=c(21,25),pt.bg=c("red", "green"))
+legend("topleft",c("m?dia", "quantis"), pch=c(21,25),pt.bg=c("red", "green"))
 		## insere a legenda no canto superior esquerdo
-		## ver '?legend' para explorar as várias opções possíveis para a legenda
+		## ver '?legend' para explorar as v?rias op??es poss?veis para a legenda
 
 ###################################################################################################################
 ###################################################################################################################
 
 ==============================
-##DISTRIBUIÇÕES ESTATÍSTICAS##
+##DISTRIBUI??ES ESTAT?STICAS##
 ==============================
   
  
-## DISTRIBUIÇÃO BINOMIAL
+## DISTRIBUI??O BINOMIAL
 ************************
 
-help (Binomial) ## Ajuda com as funções
+help (Binomial) ## Ajuda com as fun??es
 
-## DEFINIÇÃO E CONCEITOS
+## DEFINI??O E CONCEITOS
 
-dbinom(x, size, prob)## Probabilidade da variável X
+dbinom(x, size, prob)## Probabilidade da vari?vel X
 
 pbinom(q, size, prob)## Probabilidade dos valores menores que X
-  		   ##	É a curva de probabilidade acumulada
+  		   ##	? a curva de probabilidade acumulada
 
-qbinom(p, size, prob) ## Você dá um valor de probabilidade e ele retorna
-			    ## número determinado pela probabilidade acumulada 
+qbinom(p, size, prob) ## Voc? d? um valor de probabilidade e ele retorna
+			    ## n?mero determinado pela probabilidade acumulada 
 
-rbinom(n, size, prob) ## gera números de sucessos aleatórios para 
-			    ## a distribuição binomial
+rbinom(n, size, prob) ## gera n?meros de sucessos aleat?rios para 
+			    ## a distribui??o binomial
 
 ## EXEMPLO DA AULA
 
@@ -300,33 +300,33 @@ pbinom(5, size = 12, prob = 0.5, lower.tail = F)## Valores igual ou maiores
 
 qbinom(0.38, size = 12, prob = 0.5)## Valor acumulado - Inverso do anterior
 
-rbinom(5, size = 12, prob = 0.5) ## Não são iguais sempre - aleatórios
+rbinom(5, size = 12, prob = 0.5) ## N?o s?o iguais sempre - aleat?rios
 
 
-## VALOR ESPERADO E MÉDIA
+## VALOR ESPERADO E M?DIA
  
  ## E = n * p
  
        12 * 0.5
 
-## VARIÂNCIA
+## VARI?NCIA
 
   ## V = n * p *(1 - p)
 
      12 * 0.5 *(1 - 0.5)
 
-## GRAFICO MOSTRANDO A DISTRIBUIÇÃO BINOMIAL
+## GRAFICO MOSTRANDO A DISTRIBUI??O BINOMIAL
 
 plot(dbinom(seq(0,12, by =1), size = 12, prob = 0.5), type ="h",
 	xlab = "Sucesso", ylab = "Probabilidade",
-	main = "Função distribuição de probabilidade")
+	main = "Fun??o distribui??o de probabilidade")
 
 plot(pbinom(seq(0,12, by =1), size = 12, prob = 0.5), type ="h",
 	xlab = "Sucesso", ylab = "Probabilidade", 
-	main = " Função de distribuição acumulada")
+	main = " Fun??o de distribui??o acumulada")
 
 
-## EXEMPLO BROMÉLIA
+## EXEMPLO BROM?LIA
 
 dbinom(40, size = 100, prob = 0.5)## Probabilidade de ser encontrada em 40 
 					    ## cidades no total de 100 
@@ -338,42 +338,42 @@ sum(dbinom(46:54, 100, 0.5))## Pode determinar um intervalo
 ## GRAFICO BROMELIA
  
 plot(dbinom(seq(0,100, by =1), size = 100, prob = 0.5), type ="h",
-	xlab = "Presença", ylab = "Probabilidade",
-	main = "Função distribuição de probabilidade")
+	xlab = "Presen?a", ylab = "Probabilidade",
+	main = "Fun??o distribui??o de probabilidade")
 
 plot(pbinom(seq(0,100, by =1), size = 100, prob = 0.5), type ="h",
 	xlab = "Presente", ylab = "Probabilidade", 
-	main = " Função de distribuição acumulada")
+	main = " Fun??o de distribui??o acumulada")
 
 
 
-## DISTRIBUIÇÃO POISSON
+## DISTRIBUI??O POISSON
 ***********************
 
-## DEFINIÇÃO E CONCEITOS
+## DEFINI??O E CONCEITOS
 
-dpois(x, lambda)     ## Probabilidade da variável X
+dpois(x, lambda)     ## Probabilidade da vari?vel X
 
 ppois(q, lambda)     ## Probabilidade dos valores menores que X
-			   ##	É a curva de probabilidade acumulada
+			   ##	? a curva de probabilidade acumulada
 
-qpois(p, lambda)      ## Você dá um valor de probabilidade e ele retorna
-			    ## número determinado pela probabilidade acumulada 
+qpois(p, lambda)      ## Voc? d? um valor de probabilidade e ele retorna
+			    ## n?mero determinado pela probabilidade acumulada 
 
-rpois(n, lambda)      ## gera números de sucessos aleatórios para 
-			    ## a distribuição poisson
+rpois(n, lambda)      ## gera n?meros de sucessos aleat?rios para 
+			    ## a distribui??o poisson
 
 
 
-## GRAFICO MOSTRANDO A DISTRIBUIÇÃO POISSON
+## GRAFICO MOSTRANDO A DISTRIBUI??O POISSON
 
 plot(dpois(seq(1,15, by =1), lambda = 10), type ="h",
-	xlab = "Número de visitas", ylab = "Probabilidade",
-	main = "Função distribuição de probabilidade")
+	xlab = "N?mero de visitas", ylab = "Probabilidade",
+	main = "Fun??o distribui??o de probabilidade")
 
 plot(ppois(seq(0,10, by =1), lambda = 2), type ="h",
-	xlab = "Número de visitas", ylab = "Probabilidade", 
-	main = " Função de distribuição acumulada")
+	xlab = "N?mero de visitas", ylab = "Probabilidade", 
+	main = " Fun??o de distribui??o acumulada")
 
 
 ## EXEMPLOS
@@ -384,18 +384,18 @@ dpois (2, 2)
 ppois (2, 2, lower.tail = F)
 
 plot(dpois(seq(1,10, by =1), lambda = 10), type ="h",xlab = 
-"Número de visitas", ylab = "Probabilidade",  main = "Função 
+"N?mero de visitas", ylab = "Probabilidade",  main = "Fun??o 
 massa de probabilidade")
 
 plot(ppois(seq(1,10, by =1), lambda = 10),type ="h", xlab = 
-"Número visitas",  ylab = "Probabilidade",  main = "Função de 
+"N?mero visitas",  ylab = "Probabilidade",  main = "Fun??o de 
 probabilidade acumulada")
 
 plot(dbinom(seq(1,50, by =1), size =50, prob = 0.09), type 
-="h",  ylab = "Probabilidade",  main = "Distribuição Binomial")
+="h",  ylab = "Probabilidade",  main = "Distribui??o Binomial")
 
 plot(dpois(seq(1,50, by =1), lambda = 50*0.09), type ="h", ylab 
-= "Probabilidade", main = "Distribuição Poisson")
+= "Probabilidade", main = "Distribui??o Poisson")
 
 
 ## EXERCICIO TIPOS SANGUINEOS
@@ -405,16 +405,16 @@ dbinom(2, size = 5, prob = 0.4) * dbinom(1, size = 5, prob = 0.45)*
 
 
 
-## DISTRIBUIÇÃO NORMAL
+## DISTRIBUI??O NORMAL
 **********************
 
 ## EXEMPLO DA AULA
 
-## Qual é a probabildiade que um peixe capturado aleatóriamente
-## tenha 20.15 cm ou mais? MÉDIA = 17.1; Desvio = 1.21
+## Qual ? a probabildiade que um peixe capturado aleat?riamente
+## tenha 20.15 cm ou mais? M?DIA = 17.1; Desvio = 1.21
 
 
-## PRIMEIRAMENTE VAMOS VER A DISTRIBUIÇÃO DOS DADOS
+## PRIMEIRAMENTE VAMOS VER A DISTRIBUI??O DOS DADOS
 
 x = seq(12,22,by=0.1)
 
@@ -459,7 +459,7 @@ polygon(c(90,x,100), c(0,y,0), col = "gray")
 pnorm(100, mean=100, sd=10)- pnorm(90,mean = 100,sd = 10)
 
 
-## TESTAR AS PREMISSAS DA DISTRIBUIÇÃO NORMAL
+## TESTAR AS PREMISSAS DA DISTRIBUI??O NORMAL
 ###############################################
 
 ## 1 DESVIO PADRAO
@@ -476,7 +476,7 @@ polygon(c(90,x,110),c(0,y,0),col="gray")
 pnorm(110, mean=100, sd=10)-pnorm(90, mean=100, sd=10)
 
 
-## 2 DESVIOS PADRÕES
+## 2 DESVIOS PADR?ES
 #####################
 
 x=seq(70, 130, length=200)
@@ -531,8 +531,8 @@ qnorm(0.8, mean = 100, sd = 10, lower.tail = F)
 ##EXEMPLO
 #############
 
-## ALTURA MÉDIA DE ÁRVORES NO CERRADO É DE 2.8 METROS COM DESVIO PADRÃO DE
-## 0.5 METROS. A PARTIR DE QUAL ALTURA ESTARÃO OS 5% MAIS ALTOS?
+## ALTURA M?DIA DE ?RVORES NO CERRADO ? DE 2.8 METROS COM DESVIO PADR?O DE
+## 0.5 METROS. A PARTIR DE QUAL ALTURA ESTAR?O OS 5% MAIS ALTOS?
 
 x = seq(1, 4.6, by = 0.1)
 y = dnorm(x, mean = 2.8, sd = 0.5)
@@ -560,19 +560,19 @@ qnorm(0.05, mean = 2.8, sd = 0.5, lower.tail = T)
 ## EXERCICIOS
 *************
 
-#Exercício 1#
+#Exerc?cio 1#
 *************
-##  X = número de presas consumidas 2
-##       média = 5
+##  X = n?mero de presas consumidas 2
+##       m?dia = 5
 
 dpois (2, 5)
 
 
-#Exercício 2#
+#Exerc?cio 2#
 *************
   
-## a) X = número de ovos predados 3
-##      média = 6 ovos
+## a) X = n?mero de ovos predados 3
+##      m?dia = 6 ovos
 
 
 dpois (3, 6)
@@ -584,7 +584,7 @@ ppois (3, 6)
 
 
 
-#Exercício 3#
+#Exerc?cio 3#
 *************
 
 ## a) p = 0.01
@@ -593,21 +593,21 @@ ppois (3, 6)
 
 pbinom(1, size = 30, prob = 0.01, lower.tail = F)
 
-## b) média = n.p = 30*0.01
+## b) m?dia = n.p = 30*0.01
 
 ppois(1, 0.3, lower.tail = F) ## Valor muito parecido com o Binomial
 
 
-#Exercício 4#
+#Exerc?cio 4#
 *************
 
-##    média = 10
+##    m?dia = 10
 ##         x = menor que 4
 
 ppois(4, 10)
 
 
-#Exercício 5#
+#Exerc?cio 5#
 *************
   
 ##	p = 0.25
@@ -617,7 +617,7 @@ ppois(4, 10)
 dbinom(3, size = 6, prob = 0.25)
 
 
-#Exercício 6#
+#Exerc?cio 6#
 *************
 
 ## p = 0.3
@@ -627,7 +627,7 @@ dbinom(3, size = 6, prob = 0.25)
 pbinom(3, size = 4, prob = 0.3, lower.tail = F)
 
 
-#Exercício 7#
+#Exerc?cio 7#
 *************
 
 ##    p = 0.85
@@ -638,10 +638,10 @@ dbinom(10, size = 15, prob = 0.85)
 dbinom(5, size = 15, prob = 0.15)
 
 
-#Exercício 8#
-*************
+#Exerc?cio 8#
+# *************
 
-##    média = 400
+##    m?dia = 400
 ##         desvio = 50
 ##         390 < x < 450
 
@@ -660,10 +660,10 @@ text(410, 0.004, "Prob = ?", font = 2, cex = 0.8)
 pnorm(450, mean = 400, sd = 50)- pnorm(390, mean = 400, sd = 50)
 
 
-#Exercício 9#
+#Exerc?cio 9#
 *************
 
-## a) média = 4
+## a) m?dia = 4
 ##         desvio = 0.25
 ##         10% mais compridos
 
@@ -680,10 +680,10 @@ text(4.4, 0.25, "0.1%", font = 2, cex = 0.8)
 qnorm(0.1, mean = 4, sd = 0.25, lower.tail = F)
 
 
-#Exercício 10#
+#Exerc?cio 10#
 **************
 
-##   média = 8
+##   m?dia = 8
 ##         desvio = 2
 
 ## a  - menos que 5 mintuos
@@ -700,10 +700,10 @@ pnorm(9.5, mean = 8, sd = 2, lower.tail = F)
 pnorm(10, mean = 8, sd = 2) - pnorm(7, mean = 8, sd = 2)
 
 
-#Exercício 11#
+#Exerc?cio 11#
 **************
 
-##   média = 5
+##   m?dia = 5
 ##         desvio = 0.9
 
 ## a  - 15% mais leves
@@ -711,7 +711,7 @@ pnorm(10, mean = 8, sd = 2) - pnorm(7, mean = 8, sd = 2)
 qnorm(0.15, mean = 5, sd = 0.9)
 
 
-## b - 50% médios não considerando os 15% mais leves
+## b - 50% m?dios n?o considerando os 15% mais leves
 
 qnorm(0.65, mean = 5, sd = 0.9)
 
@@ -720,7 +720,7 @@ qnorm(0.65, mean = 5, sd = 0.9)
 qnorm(0.85, mean = 5, sd = 0.9)
 
 leves = 4,1 kg
-médios = 4.1 < X < 5.4 Kg
+m?dios = 4.1 < X < 5.4 Kg
 pesado = 4.9 < X < 5.9 Kg
 Extras = > 5.9 Kg
 
@@ -737,7 +737,7 @@ Extras = > 5.9 Kg
 #    www.highstat.com
 
 
-## CARREGANDO PACOTES NECESSÁRIOS PARA AS ANÁLISES
+## CARREGANDO PACOTES NECESS?RIOS PARA AS AN?LISES
 ###################################################
 
 install.packages("HH")
@@ -770,14 +770,14 @@ library(pscl)
 library(MASS)
 library(bbmle)
 library(lattice)
-library(AED)## Esse pacote tem que ser baixado da págia
+library(AED)## Esse pacote tem que ser baixado da p?gia
   	## http://www.highstat.com/book2.htm
 
 ## CARREGANDO DADOS
 #####################
 
-data(RoadKills) ## Carregando dados - Os dados consistem do número de mortes
-		    ## de anfíbios em uma rodovia em 52 sítios em Portugal
+data(RoadKills) ## Carregando dados - Os dados consistem do n?mero de mortes
+		    ## de anf?bios em uma rodovia em 52 s?tios em Portugal
 
 
 RK <- RoadKills ## Renomeando para facilitar
@@ -785,11 +785,11 @@ RK <- RoadKills ## Renomeando para facilitar
 head(RK)
 
 ## TEORIA - Ecologia de Paisagem
-## VARIÁVEL RESPOSTA  - Número de anfíbios mortos em um rodovia
-## QUESTÃO - Quais variáveis da paisagem melhor explicam
-## a mortalidade de anfíbios? 
+## VARI?VEL RESPOSTA  - N?mero de anf?bios mortos em um rodovia
+## QUEST?O - Quais vari?veis da paisagem melhor explicam
+## a mortalidade de anf?bios? 
 
-## TRANSFOMO ALGUMAS VARIÁVEIS POR CAUSA DOS ALTOS VALORES
+## TRANSFOMO ALGUMAS VARI?VEIS POR CAUSA DOS ALTOS VALORES
 ***********************************************************
 
 RK$SQ.POLIC <- sqrt(RK$POLIC)
@@ -801,10 +801,10 @@ RK$SQ.SHRUB <- sqrt(RK$SHRUB)
 RK$SQ.DWATCOUR <- sqrt(RK$D.WAT.COUR)
 
 
-## VERIFICANDO COLINEARIDADE ENTRE AS VARIÁVEIS INDEPENDENTES
+## VERIFICANDO COLINEARIDADE ENTRE AS VARI?VEIS INDEPENDENTES
 ###############################################################
 
-## COLINEARIDADE é a existencia de correlação entre as covariáveis
+## COLINEARIDADE ? a existencia de correla??o entre as covari?veis
 
 Z1 <-cbind(RK$OPEN.L, RK$SQ.OLIVE, RK$MONT.S,RK$MONT, RK$SQ.POLIC,
      RK$SQ.SHRUB, RK$SQ.URBAN, RK$SQ.WATRES, RK$L.WAT.C,
@@ -815,10 +815,10 @@ corvif(Z1)
 
 
 
-## Usamos valor de VIF = 3 para encontrar um conjunto de variáveis 
-## explicativas que não contém colinearidade, foram retirados
-## uma variável de cada vez, recalculados os valores de VIF,
-## e repetiu o processo até todos os valores de VIF foram inferiores a 3.
+## Usamos valor de VIF = 3 para encontrar um conjunto de vari?veis 
+## explicativas que n?o cont?m colinearidade, foram retirados
+## uma vari?vel de cada vez, recalculados os valores de VIF,
+## e repetiu o processo at? todos os valores de VIF foram inferiores a 3.
 
 
 Z2 <-cbind(RK$OPEN.L, RK$MONT.S, RK$SQ.POLIC, RK$SQ.SHRUB, RK$SQ.WATRES, 
@@ -868,7 +868,7 @@ AIC <- ICtab(M1, M2, M3, M4, type = c("AIC"), weights = TRUE,
 AIC
 
 
-## WEIGHT = são usados para medir a força da evidência em favor
+## WEIGHT = s?o usados para medir a for?a da evid?ncia em favor
 ##          de cada um dos modelos
 
 ## n/k < 40 
@@ -912,17 +912,17 @@ Modelos [[4]] <- glm(TOT.N ~ L.WAT.C + SQ.LPROAD +
 
 
 
-## TESTE DE HIPÓTESES - Likelihood rate test (LRT)
+## TESTE DE HIP?TESES - Likelihood rate test (LRT)
 ###################################################
 
-## DEVIANCE = RESIDUAL DEVIANCE = É 2 x a diferença entre
+## DEVIANCE = RESIDUAL DEVIANCE = ? 2 x a diferen?a entre
 ## o log likelihood do modelo que apresenta um ajuste perfeito (modelo
-## saturado) e o modelo em questão. Quanto melhor o residual deviance
+## saturado) e o modelo em quest?o. Quanto melhor o residual deviance
 ## melhor o modelo.
  
 
-drop1(M1,test = "Chi") ## A diferença entre as deviance dos modelos
-			     ## apresenta uma distribuição chi-square com
+drop1(M1,test = "Chi") ## A diferen?a entre as deviance dos modelos
+			     ## apresenta uma distribui??o chi-square com
 	                 ## p1 - p2 graus de liberdade
 
 DM1 <- glm(TOT.N ~ OPEN.L + MONT.S + SQ.POLIC +
@@ -933,7 +933,7 @@ drop1(DM1, test = "Chi")
 
 anova(DM1, M1, test = "Chi") 
 
-## Confirmando esses informação com o que aprendemos anteriormente
+## Confirmando esses informa??o com o que aprendemos anteriormente
 *******************************************************************
 
 pchisq (2.269, 1, lower.tail = F)
@@ -942,15 +942,15 @@ pchisq (2.269, 1, lower.tail = F)
 
 
 
-## CONTUDO A VIDA NÃO É TÃO SIMPLES
+## CONTUDO A VIDA N?O ? T?O SIMPLES
 #####################################
 
-## ANTES DE ANALISAR OS RESULTADOS E REALIZAR AS ANÁLISES DE SELEÇÃO
-## VOCÊ PRECISA CHECAR SEUS DADOS PARA OVERDISPERSÃO
+## ANTES DE ANALISAR OS RESULTADOS E REALIZAR AS AN?LISES DE SELE??O
+## VOC? PRECISA CHECAR SEUS DADOS PARA OVERDISPERS?O
 
-## OVERDISPERSÃO =  significa que a variância é maior que a média
+## OVERDISPERS?O =  significa que a vari?ncia ? maior que a m?dia
 
-## COMO SABER SE OS DADOS APRESENTAM OVERDISPERSÃO
+## COMO SABER SE OS DADOS APRESENTAM OVERDISPERS?O
 
 M1 <- glm(TOT.N ~ OPEN.L + MONT.S + SQ.POLIC +
          SQ.SHRUB + SQ.WATRES + L.WAT.C + SQ.LPROAD +
@@ -977,25 +977,25 @@ M4 <- glm (TOT.N ~ OPEN.L + MONT.S + SQ.POLIC+
 summary(M4)
 
 
-## Não escrever na sua dissertação ou artigo que usou uma distribuição
-## Quasi-Poisson. Quasi-Poisson não é uma distribuição.
-## Basta dizer que você fez GLM com distribuição Poisson, 
-## detectou overdispersão, e corrigiu os erros padrões usando um modelo
-## quasi-GLM, onde a variância é dada por f × µ, onde µ é a média 
-## e f o parâmetro de dispersão.
+## N?o escrever na sua disserta??o ou artigo que usou uma distribui??o
+## Quasi-Poisson. Quasi-Poisson n?o ? uma distribui??o.
+## Basta dizer que voc? fez GLM com distribui??o Poisson, 
+## detectou overdispers?o, e corrigiu os erros padr?es usando um modelo
+## quasi-GLM, onde a vari?ncia ? dada por f ? ?, onde ? ? a m?dia 
+## e f o par?metro de dispers?o.
 
-## Veja que o parâmetro de dispersão f é estimado em 5,93. 
-## Isto significa que todos os erros padrões foram multiplicados por 2,43
-## (a raiz quadrada de 5,93), e como resultado, a maioria dos parâmetros
-## não são mais significativas.
+## Veja que o par?metro de dispers?o f ? estimado em 5,93. 
+## Isto significa que todos os erros padr?es foram multiplicados por 2,43
+## (a raiz quadrada de 5,93), e como resultado, a maioria dos par?metros
+## n?o s?o mais significativas.
 
 
-## SELEÇÃO MODELOS EM QUASI-POISSON
+## SELE??O MODELOS EM QUASI-POISSON
 **************************************
 
-## Sob a hipótese nula, os parâmetros de regressão da variável independente
-## omitidos são iguais a zero, e os F-ratio segue uma distribuição F com
-## p1 - p2 e n - p1 graus de liberdade (n é o número de observações)
+## Sob a hip?tese nula, os par?metros de regress?o da vari?vel independente
+## omitidos s?o iguais a zero, e os F-ratio segue uma distribui??o F com
+## p1 - p2 e n - p1 graus de liberdade (n ? o n?mero de observa??es)
 
 drop1(M4, test = "F")
 
@@ -1062,14 +1062,14 @@ G <- predict(M12, newdata = RK, type = "link",
 F <- exp(G$fit)
 FSEUP <- exp(G$fit + 1.96 * G$se.fit)
 FSELOW <- exp(G$fit - 1.96 * G$se.fit)
-plot(RK$D.PARK, RK$TOT.N, xlab = "Distância até o parque",
-ylab = "Número de anfíbios mortos")
+plot(RK$D.PARK, RK$TOT.N, xlab = "Dist?ncia at? o parque",
+ylab = "N?mero de anf?bios mortos")
 lines(RK$D.PARK, F, lty = 1, col = "red")
 lines(RK$D.PARK, FSEUP, lty = 2, col = "red")
 lines(RK$D.PARK, FSELOW, lty = 2, col = "red")
 
 
-## Em Quasi-Poisson - AIC não é calculado
+## Em Quasi-Poisson - AIC n?o ? calculado
 
 ## QUASI-AIC
 ***************
@@ -1079,14 +1079,14 @@ MQP1 <- get.models(dd1, 1:8)
 model.avg(MQP1)
 
 
-## Os usuários devem ter em mente os riscos que tal "abordagem 
-## impensada" de avaliação de todos os modelos possíveis possue. 
-## Embora este procedimento é útil em certos casos e justificado,
-## ele pode resultar na escolha de um  "melhor" modelo espúrio.
+## Os usu?rios devem ter em mente os riscos que tal "abordagem 
+## impensada" de avalia??o de todos os modelos poss?veis possue. 
+## Embora este procedimento ? ?til em certos casos e justificado,
+## ele pode resultar na escolha de um  "melhor" modelo esp?rio.
 
-## "Deixar o computador descobrir" é uma pobre estratégia e geralmente reflete
-## o fato de que o pesquisador não se preocupou em pensar claramente 
-## sobre o problema de interesse  e sua configuração científica
+## "Deixar o computador descobrir" ? uma pobre estrat?gia e geralmente reflete
+## o fato de que o pesquisador n?o se preocupou em pensar claramente 
+## sobre o problema de interesse  e sua configura??o cient?fica
 ## (Burnham e Anderson, 2002).
 
 
@@ -1138,7 +1138,7 @@ c_hat(MQP[[1]])
 ## COMPARANDO BINOMIAL NEGATIVA COM POISSON
 **********************************************
 
-## odTest = Compara o log-likelihood do modelo de regressão binomial negativa
+## odTest = Compara o log-likelihood do modelo de regress?o binomial negativa
 ## com modelo regressao Poisson
  
 
@@ -1155,7 +1155,7 @@ llhNB = logLik(NB)
 llhPoisson  = logLik(M1)
 d <- 2 * (llhNB - llhPoisson)
 pchisq(as.numeric(d), df = 1, lower.tail = FALSE)/2 ## Binomial negativa 
-								    ## é melhor
+								    ## ? melhor
 
 
 ## BINOMIAL NEGATIVA
@@ -1180,7 +1180,7 @@ NB7 <- glm.nb(TOT.N ~ OPEN.L + L.WAT.C + D.PARK, link = "log", data = RK)
 NB8 <- glm.nb(TOT.N ~ OPEN.L + D.PARK, link = "log", data = RK)
 
 
-## Seleção automática
+## Sele??o autom?tica
 ************************
 
 AIC <- stepAIC(NB1)
@@ -1195,7 +1195,7 @@ AICc <- ICtab(NB1, NB2, NB3, NB4, NB5, NB6, NB7, NB8, type = c("AICc"),
 AICc
 
 
-## TESTE DE HIPÓTESE
+## TESTE DE HIP?TESE
 **********************
 
 drop1(NB1,test="Chi")
@@ -1240,7 +1240,7 @@ drop1(NB7,test="Chi")
 NB8 <- glm.nb(TOT.N ~ OPEN.L + D.PARK, link="log", data = RK)
 
 drop1(NB8,test="Chi") ## Autores argumentaram que o valor de L.WAT.C
-			    ## estavam muito próximos do mágico valor de 0.05
+			    ## estavam muito pr?ximos do m?gico valor de 0.05
 
 
 summary(NB8)
@@ -1278,12 +1278,12 @@ par(op)
 GLM BINOMIAL
 **************
 
-## Agora mostrarei um exemplo bem simples com dados de presença e ausência.
-## GLM com dados binários ou proporção são também chamados de 
-## regressão logística
+## Agora mostrarei um exemplo bem simples com dados de presen?a e aus?ncia.
+## GLM com dados bin?rios ou propor??o s?o tamb?m chamados de 
+## regress?o log?stica
 
-## Analisar a distribuição de tuberculose em javalis. Modelou a ocorrência
-## da tuberculose como uma função do comprimento do javali (cabeça-tronco).
+## Analisar a distribui??o de tuberculose em javalis. Modelou a ocorr?ncia
+## da tuberculose como uma fun??o do comprimento do javali (cabe?a-tronco).
 
 data(Boar)
 head(Boar)
@@ -1326,7 +1326,7 @@ corvif(Z)
 
 Tbdeer$fFenced <- factor(Tbdeer$Fenced)
 
-## Proporção
+## Propor??o
 *************
 
 Tbdeer$DeerPosProp <- Tbdeer$DeerPosCervi / Tbdeer$DeerSampledCervi
@@ -1396,8 +1396,8 @@ MyData <- data.frame(OpenLand = seq(from = min(Tbdeer$OpenLand),
 P1 <- predict(Deer8, newdata = MyData, type = "link", se = TRUE)
 plot(MyData$OpenLand,exp(P1$fit)/(1+exp(P1$fit)),
      type="l",ylim=c(0,1),
-     xlab="Porcentagem de área aberta",
-     ylab="Probabilidade de infecção por E. cervi")
+     xlab="Porcentagem de ?rea aberta",
+     ylab="Probabilidade de infec??o por E. cervi")
 lines(MyData$OpenLand,exp(P1$fit+1.96*P1$se.fit)/
        (1+exp(P1$fit+1.96*P1$se.fit)),lty=2)
 lines(MyData$OpenLand,exp(P1$fit-1.96*P1$se.fit)/
@@ -1405,11 +1405,11 @@ lines(MyData$OpenLand,exp(P1$fit-1.96*P1$se.fit)/
 points(Tbdeer$OpenLand,Tbdeer$DeerPosProp)
 
 
-## Esse resultado sugere que quanto maior a porcentagem de área aberta
-## menor a probabilidade de amostrar um veado com infecção por E. cervi.
+## Esse resultado sugere que quanto maior a porcentagem de ?rea aberta
+## menor a probabilidade de amostrar um veado com infec??o por E. cervi.
 
 
-## Visualização dos resíduos
+## Visualiza??o dos res?duos
 ******************************
 
 EP = resid(Deer8,type = "pearson")
@@ -1428,14 +1428,14 @@ plot(Deer8)
 ## Generalized Mixed Effects Models
 ***********************************
 
-## São usados para modelos mais complexos com design em blocos e dados aninhados.
+## S?o usados para modelos mais complexos com design em blocos e dados aninhados.
 
 ## Aprensenta dois efeitos
 ******************************
 
-## EFEITO FIXO - depende somente da média
+## EFEITO FIXO - depende somente da m?dia
 
-## EFEITO ALEATÓRIO - depende somente da variância (não queremos 
+## EFEITO ALEAT?RIO - depende somente da vari?ncia (n?o queremos 
 ## medir o efeito
 
 
@@ -1443,11 +1443,11 @@ data(RIKZ)
 head(RIKZ)
 
 
-## Riqueza de animais marinhos bentônicos em nove praias, 
+## Riqueza de animais marinhos bent?nicos em nove praias, 
 ## cada praia com cinco amostras.
-## NAP = altura da estação de amostral em relação ao nível da maré
+## NAP = altura da esta??o de amostral em rela??o ao n?vel da mar?
 
-## Questão é se existe relação entre a riqueza e a NAP
+## Quest?o ? se existe rela??o entre a riqueza e a NAP
 
 ## Transformo praia em fator
 *******************************
@@ -1468,7 +1468,7 @@ F1 <- fitted(Mlme1,level=1)
 I <- order(RIKZ$NAP)
 NAPs <- sort(RIKZ$NAP)
 plot(NAPs,F0[I],lwd=4,type="l",ylim=c(0,22),
-     ylab="Riqueza de espécies",xlab="NAP")
+     ylab="Riqueza de esp?cies",xlab="NAP")
 for (i in 1:9){
    x1<-RIKZ$NAP[RIKZ$Beach==i]
    y1<-F1[RIKZ$Beach==i]
@@ -1481,24 +1481,24 @@ text(RIKZ$NAP,RIKZ$Richness,RIKZ$Beach,cex=0.9)
 ## na linha predita
 
 
-## Suponha que a relação entre riqueza de espécies e NAP é diferente em
-## cada praia. Isto implica que temos que incluir um interação entre
+## Suponha que a rela??o entre riqueza de esp?cies e NAP ? diferente em
+## cada praia. Isto implica que temos que incluir um intera??o entre
 ## NAP * Beach no modelo. Mas isso tem um custo muito alto elevando o 
-## modelo para 17 parâmetros. E não estamos interessados no efeito da praia.
-## Contudo, se existe variação entre praias e na interação NAP * Praias, nós
-## não podemos ignorar esses termos. Se fizermos isso, a variação sistemática
-## vai aparecer nos resíduos, levando a inferências erradas.
-## Nós podemos aplicar o Mixed Effects Model com random intercept e 
+## modelo para 17 par?metros. E n?o estamos interessados no efeito da praia.
+## Contudo, se existe varia??o entre praias e na intera??o NAP * Praias, n?s
+## n?o podemos ignorar esses termos. Se fizermos isso, a varia??o sistem?tica
+## vai aparecer nos res?duos, levando a infer?ncias erradas.
+## N?s podemos aplicar o Mixed Effects Model com random intercept e 
 ## random slope.
 
 Mlme2 <- lme(Richness ~ NAP,
              random = ~ 1 + NAP | fBeach, data = RIKZ)
 summary(Mlme2)
 
-## 3.54 quantidade de variação no intercepto da população
-## 1.71 variação no slope (inclinação) na nove praias
-## Correlação fala que praias com interceptos mais altos também tem 
-## inclinação negativa mais alta...
+## 3.54 quantidade de varia??o no intercepto da popula??o
+## 1.71 varia??o no slope (inclina??o) na nove praias
+## Correla??o fala que praias com interceptos mais altos tamb?m tem 
+## inclina??o negativa mais alta...
 
 
 ## Grafico
@@ -1509,7 +1509,7 @@ F1 <- fitted(Mlme2,level=1)
 I <- order(RIKZ$NAP)
 NAPs <- sort(RIKZ$NAP)
 plot(NAPs,F0[I],lwd=4,type="l",ylim=c(0,22),
-     ylab="Riqueza de espécies",xlab="NAP")
+     ylab="Riqueza de esp?cies",xlab="NAP")
 for (i in 1:9){
    x1<-RIKZ$NAP[RIKZ$Beach==i]
    y1<-F1[RIKZ$Beach==i]
@@ -1522,9 +1522,9 @@ text(RIKZ$NAP,RIKZ$Richness,RIKZ$Beach,cex=0.9)
 
 ## Precisamos falar de Likelihood em Mixed Models
 
-## MAXIMUM LIKELIHOOD (ML) - escolhe os parâmetros tal que L é máxima. 
-## O problema é que ML ignora o fato que intercepto e slope são estimados 
-## também...
+## MAXIMUM LIKELIHOOD (ML) - escolhe os par?metros tal que L ? m?xima. 
+## O problema ? que ML ignora o fato que intercepto e slope s?o estimados 
+## tamb?m...
 
 ## RESTRICTED MAXIMUM LIKELIHOOD (REML)  - corrige o grau de liberdade
 
@@ -1549,19 +1549,19 @@ M1.REML <- lme(Richness ~NAP+fExp, data = RIKZ,
 ## PROTOCOLO 
 **************
 
-## 1 - Comece com um modelo onde o componente fixo contem todas as variáveis
-## independentes e tantas interações possíveis. 
+## 1 - Comece com um modelo onde o componente fixo contem todas as vari?veis
+## independentes e tantas intera??es poss?veis. 
 
-## 2 -  Ache a melhor estrutura para o modelo aleatório. Você precisa 
+## 2 -  Ache a melhor estrutura para o modelo aleat?rio. Voc? precisa 
 ## comporar os modelos com REML tanto para LRT como para AIC ou BIC...
 
-## 3 - Depois de achar o modelo aleatório, temos que comparar os modelos
+## 3 - Depois de achar o modelo aleat?rio, temos que comparar os modelos
 ## fixos.. Para isso temos que usar ML...
 
 ## 4 - Apresente o modelo final com REML...
 
 
-## PASSO 1 e 2 - Selecionando efeito aleatório
+## PASSO 1 e 2 - Selecionando efeito aleat?rio
 ***********************************************
 
  B1 <- gls(Richness ~ NAP * fExp,
@@ -1574,7 +1574,7 @@ M1.REML <- lme(Richness ~NAP+fExp, data = RIKZ,
         random = ~1 + NAP | fBeach, method = "REML")
 
 
-## seleção 
+## sele??o 
 *************
 
 AIC(B1, B2, B3)
@@ -1591,8 +1591,8 @@ anova (B1, B2, B3)
         random = ~1 | fBeach, method = "ML")
 summary(B2)
 
-## Realçam a interpretação de valores de p próximo a 0.05
-## Retira a interação
+## Real?am a interpreta??o de valores de p pr?ximo a 0.05
+## Retira a intera??o
 
  B3 <- lme(Richness ~  NAP + fExp, data = RIKZ,
         random = ~1 | fBeach, method = "ML")
@@ -1621,32 +1621,32 @@ summary(B2)
 ############################################################################
 ############################################################################
 
-## BEES - Os dados são aninhados com multiplas observações da mesma colméia
-## são 24 colméias com 3 medidas por colméia..
+## BEES - Os dados s?o aninhados com multiplas observa??es da mesma colm?ia
+## s?o 24 colm?ias com 3 medidas por colm?ia..
 
 ## Mostrar VarIdent
 
 data(Bees)
 tail(Bees)
 
-## Como variável dependente temos densidade de esporos medido em cada
-## colméia.. A variável independente infection quantifica o grau de infecção,
+## Como vari?vel dependente temos densidade de esporos medido em cada
+## colm?ia.. A vari?vel independente infection quantifica o grau de infec??o,
 ## com valores 0, 1, 2 e 3. Embora mixed effects modelling podem 
-## lidar com um certo grau de dados desbalanceados, neste caso, é melhor
-## converter a variável infection em 0 (sem infecção) e 1 (infectado)
-## porque existes poucas observações com valores 2 e 3.
+## lidar com um certo grau de dados desbalanceados, neste caso, ? melhor
+## converter a vari?vel infection em 0 (sem infec??o) e 1 (infectado)
+## porque existes poucas observa??es com valores 2 e 3.
 
 Bees$Infection01 <- Bees$Infection
 Bees$Infection01[Bees$Infection01 > 0] <- 1
 Bees$fInfection01 <- factor(Bees$Infection01)
 
-## Transformo colméia em fator
+## Transformo colm?ia em fator
 ******************************
 
 Bees$fHive <- factor(Bees$Hive)
 Bees$LSpobee <- log10(Bees$Spobee + 1)
 
-## Ploto os dados por colméia
+## Ploto os dados por colm?ia
 ********************************
 
 op <- par(mfrow = c(1, 2), mar = c(3, 4, 1, 1))
@@ -1655,24 +1655,24 @@ dotchart(Bees$LSpobee, groups = Bees$fHive, main = "Dados transformado")
 par(op)
 
 
-## Começar com uma regressão linear e plotarei os residuos por colméia
+## Come?ar com uma regress?o linear e plotarei os residuos por colm?ia
 ************************************************************************
 
 M1 <- lm(LSpobee ~ fInfection01 * BeesN, data = Bees)
 E1 <- rstandard(M1)
-plot(E1 ~ Bees$fHive, ylab = "Resíduos", xlab = "Colméias")
+plot(E1 ~ Bees$fHive, ylab = "Res?duos", xlab = "Colm?ias")
 abline(0, 0)
 
-## Opção de colocar colméia como random effect
+## Op??o de colocar colm?ia como random effect
 ************************************************
 
 ## Vantagens
 
-## (1) requer um extra parâmetro (variância do intercepto), comparado
-## com liner regressão que requer 23 parâmetros extras 
+## (1) requer um extra par?metro (vari?ncia do intercepto), comparado
+## com liner regress?o que requer 23 par?metros extras 
 
-## (2) Nós podemos fazer afirmações para colméias em geral não só para as 
-## 24 colméias do estudo
+## (2) N?s podemos fazer afirma??es para colm?ias em geral n?o s? para as 
+## 24 colm?ias do estudo
 
 
 ## Selecionando random effect
@@ -1694,17 +1694,17 @@ anova(M1,M3)
 plot(M1, col = 1)
 
 
-## plota por infecção
+## plota por infec??o
 ************************
 
 boxplot(LSpobee ~ fInfection01, data = Bees, varwidth = TRUE)
 
 
-## Inserimos um comando para dizer que as variâncias para infecção
-## são diferentes
+## Inserimos um comando para dizer que as vari?ncias para infec??o
+## s?o diferentes
 
-## varIdent = permite modelar diferentes variâncias para variáveis 
-## categóricas
+## varIdent = permite modelar diferentes vari?ncias para vari?veis 
+## categ?ricas
 
 M1 <- lme(LSpobee ~ fInfection01 * BeesN,
           random = ~ 1 | fHive, method = "REML", data = Bees)
@@ -1769,7 +1769,7 @@ data (ergoStool)
 head(ergoStool)
 
 
-## Esforço requirido por 4 diferentes mandíbulas para rasgar
+## Esfor?o requirido por 4 diferentes mand?bulas para rasgar
 ## 9 diferentes objetos
 
 fm1Stool <- lme (effort ~ Type, data = ergoStool, random = ~ 1 | Subject) 
@@ -1781,16 +1781,16 @@ summary(fm1Stool)
 
 (mean <- tapply(ergoStool$effort, ergoStool$Type, mean))
 
-## O primeiro parâmetro (intercepto) é a média da primeira categoria
-## definida por ordem alfabética
+## O primeiro par?metro (intercepto) ? a m?dia da primeira categoria
+## definida por ordem alfab?tica
 
-## O segundo parâmetro é a diferença entre o segundo parâmetro e o 
+## O segundo par?metro ? a diferen?a entre o segundo par?metro e o 
 ## intercepto
 
 mean[2] - mean [1]
 
 
-## O terceiro parâmetro é a diferença entre o terceiro parâmetro e o 
+## O terceiro par?metro ? a diferen?a entre o terceiro par?metro e o 
 ## intercepto
 
 mean[3] - mean [1]
@@ -1814,7 +1814,7 @@ summary(comparacao)
 
 ############################################################################
 #GLMM
-##### EXERCÍCIOS ######
+##### EXERC?CIOS ######
 
 
 data(Owls)
@@ -1837,7 +1837,7 @@ summary(O1.lmer)
 
 print(O1.lmer, sigma = T, corr = F)
 
-## Retiro Interação
+## Retiro Intera??o
 *********************
 
 O2.lmer<-lmer(NCalls ~ offset(LBroodSize)+
@@ -1847,7 +1847,7 @@ O2.lmer<-lmer(NCalls ~ offset(LBroodSize)+
 
 anova(O1.lmer,O2.lmer)
 
-## Retiro interação
+## Retiro intera??o
 **********************
 
 O3.lmer<-lmer(NCalls ~ offset(LBroodSize) +
@@ -1929,7 +1929,7 @@ AICc
 
 
 coplot(fitted(M5) ~ ArrivalTime | FoodTreatment , data = Owls,
-	 ylab = "Número de piados", xlab = "Tempo de chegada")
+	 ylab = "N?mero de piados", xlab = "Tempo de chegada")
 
 
 E2<-resid(M5,type="normalized")
@@ -1979,7 +1979,7 @@ P1 <- predict(GLM.1, newdata = MyData, type = "link",
 plot(MyData$volume, exp(P1$fit) / (1 + exp(P1$fit)),
 	type = "l", ylim = c(0, 1),
 	xlab = "Volume",
-	ylab = "Probabilidade de exclusão")
+	ylab = "Probabilidade de exclus?o")
 lines(MyData$volume, exp(P1$fit + P1$se.fit)/
 	(1 + exp(P1$fit + P1$se.fit)), lty = 2)
 lines(MyData$volume, exp(P1$fit - P1$se.fit)/
@@ -1987,7 +1987,7 @@ lines(MyData$volume, exp(P1$fit - P1$se.fit)/
 points(teste1$volume, y = teste1$exclusao)
 
 
-## GRAFICO INTERVALO DE CONFIANÇA
+## GRAFICO INTERVALO DE CONFIAN?A
 ############################
 
 P1 <- predict(GLM.1, newdata = MyData, type = "link",
@@ -1995,7 +1995,7 @@ P1 <- predict(GLM.1, newdata = MyData, type = "link",
 plot(MyData$volume, exp(P1$fit) / (1 + exp(P1$fit)),
 	type = "l", ylim = c(0, 1),
 	xlab = "Volume",
-	ylab = "Probabilidade de exclusão")
+	ylab = "Probabilidade de exclus?o")
 lines(MyData$volume, exp(P1$fit+1.96*P1$se.fit) /
 	(1 + exp(P1$fit + 1.96 * P1$se.fit)), lty = 2)
 lines(MyData$volume, exp(P1$fit-1.96*P1$se.fit) /
@@ -2014,13 +2014,13 @@ Solea <- read.csv (file.choose(),header = TRUE)
 
 head(Solea)
 
-## Abundância do peixe Solea Solea em um estuário em Portugal
-## Identificar quais fatores ambientais influênciam na escolha
-## do bercário pela espécie. Os dados de abunância foram coletados
-## em amostras mensais conduzidas em 4 áreas durante 1995 e 1996.
+## Abund?ncia do peixe Solea Solea em um estu?rio em Portugal
+## Identificar quais fatores ambientais influ?nciam na escolha
+## do berc?rio pela esp?cie. Os dados de abun?ncia foram coletados
+## em amostras mensais conduzidas em 4 ?reas durante 1995 e 1996.
 
 
-## Temos 11 variáveis.. Muitas comparado com o número de amostras
+## Temos 11 vari?veis.. Muitas comparado com o n?mero de amostras
 
 ## Colinearidade
 *****************
@@ -2050,9 +2050,9 @@ par(mar = c(4.5, 4.5, 0.5, 0.5), cex.lab = 1.3, cex.axis = 1.3)
 plot(Solea[, 9:12], lower.panel = panel.cor, 
      upper.panel = panel.smooth2)
 
-## Retira large.sand e med.fine.sand, mantêm somente mud entre 
-## as variáveis correlacionadas. Tenham em mente que isso é uma escolha
-## ecológica, não estatística.
+## Retira large.sand e med.fine.sand, mant?m somente mud entre 
+## as vari?veis correlacionadas. Tenham em mente que isso ? uma escolha
+## ecol?gica, n?o estat?stica.
  
 
 
@@ -2068,7 +2068,7 @@ plot.design(Solea.solea ~ season + month + area,
             data = data_solea, axes = T, xtick = T)
  
  
-## Uma vez que Season é um classificação dos meses e são colineares
+## Uma vez que Season ? um classifica??o dos meses e s?o colineares
 ## retiramos season e mantemos month por ser mais informativa.
 
  
@@ -2080,7 +2080,7 @@ solea_glm <- glm(Solea.solea ~ temp + sal + gravel + factor(month) + mud,
 
 summary(solea_glm)
 
-## Seleção variáveis
+## Sele??o vari?veis
 ***********************
 
 drop1(solea_glm, test="Chi")
@@ -2115,23 +2115,23 @@ coplot(Solea.solea ~ sal | month, data = Solea, overlap = 0,
 ###############################################################################################################
 
 ===================================
-##CURVA DE ACUMULAÇÃO DE ESPECIES##
+##CURVA DE ACUMULA??O DE ESPECIES##
 ===================================
 
 
 library (vegan)
 library(BiodiversityR)
 
-## COMANDOS RAREFAÇÃO
+## COMANDOS RAREFA??O
 ########################
 
 ## rarefy(x, sample, se = FALSE, MARGIN = 1)
 
 ## X = COMUNIDADE
 ## sample = tamanho da sub-amostra
-## se = desvio padrão
-## MARGIN = # MARGIN 1 = espécies na coluna
-  	# MARGIN 2 = espécies nas linhas
+## se = desvio padr?o
+## MARGIN = # MARGIN 1 = esp?cies na coluna
+  	# MARGIN 2 = esp?cies nas linhas
 
 
 ## ABRINDO O ARQUIVO COM O EXEMPLO
@@ -2143,18 +2143,18 @@ rare
 ## Soma abundancia total para cada comunidade
 **********************************************
 
-sum(rare$roedores)## Abundância total
-sum(rare$roedores1)## Abundância total
-sum(rare$roedores2)## Abundância total
+sum(rare$roedores)## Abund?ncia total
+sum(rare$roedores1)## Abund?ncia total
+sum(rare$roedores2)## Abund?ncia total
 
 
-## Riqueza de espécie total para cada comunidade
+## Riqueza de esp?cie total para cada comunidade
 **************************************************
 
-specnumber(rare, MARGIN =  2)# número de espécies por comunidade
+specnumber(rare, MARGIN =  2)# n?mero de esp?cies por comunidade
 
 
-## Rarefação para amostras de 30 individuos
+## Rarefa??o para amostras de 30 individuos
 **********************************************
 
 rarefy(rare$roedores, sample = 30, MARGIN = 2)
@@ -2162,7 +2162,7 @@ rarefy(rare$roedores1, sample = 30, MARGIN = 2)
 rarefy(rare$roedores2, sample = 30, MARGIN = 2)
 
 
-## Para realizar rarefação para diferentes valores de sub-amostras
+## Para realizar rarefa??o para diferentes valores de sub-amostras
 ## eu crio um comando com diversos tamanhos de amostras
 
 amostras1 <- c(seq(5, 40, by = 1))
@@ -2170,7 +2170,7 @@ amostras2 <- c(seq(5, 80, by = 1))
 amostras3 <- c(seq(5, 70, by = 1))
 
 
-## Rarefação para varias amostras 
+## Rarefa??o para varias amostras 
 **********************************************
 
 roedor1 <- rarefy(rare$roedores, sample = amostras1, se = T, MARGIN = 2)
@@ -2181,11 +2181,11 @@ roedor3 <- rarefy(rare$roedores2, sample = amostras3, se = T, MARGIN = 2)
 ## GRAFICO
 ############
 
-plot(amostras2, roedor2[1,], ylab = "Riqueza de espécies",
+plot(amostras2, roedor2[1,], ylab = "Riqueza de esp?cies",
 	xlab = "No. de Individuos",
 	ylim = c(1, 9), xlim = c(1,
 	90), type= "n")
-text(30, 9, "Rarefação comunidade de roedores")
+text(30, 9, "Rarefa??o comunidade de roedores")
 
 lines(amostras1, roedor1[1, ], type = "b", col = "red", lwd = 1.7)
 lines(amostras2 + 0.2, roedor2[1, ], type = "b", col = "blue", lwd = 1.7)
@@ -2222,7 +2222,7 @@ lines(amostras3, roedor3[1, ] - roedor3[2, ], lwd = 1.7,
 ####################
 
 data(BCI) ##  CARREGA DADOS DO VEGAN - 50 PLOTS DE 1 ha e 225 especies
-head (BCI) ## para facilitar a visualização da planilha
+head (BCI) ## para facilitar a visualiza??o da planilha
 
 
 ## Diminuir o tamanho da planilha para facilitar
@@ -2232,19 +2232,19 @@ bci <- BCI[seq(5, 50, by = 5), ] ## SEPARA 10 PLOTS PARA FACILITAR VISUALIZAZAO
 bci
 
 
-## Número de espécies em cada amostra amostra
+## N?mero de esp?cies em cada amostra amostra
 ***********************************************
 
 specnumber(bci, MARGIN =  1)
 
 
-## Soma abundancia total para cada espécie
+## Soma abundancia total para cada esp?cie
 ******************************************
 
 (N <- colSums(bci))
 
 
-## Soma total de indivíduos
+## Soma total de indiv?duos
 ******************************
 
 sum(N)
@@ -2256,7 +2256,7 @@ sum(N)
 (subs3 <- c(seq(500, 4500, by = 500), sum(N)))
 
 
-## Analise de rarefação para a comunidade
+## Analise de rarefa??o para a comunidade
 *******************************************
 
 (rar3 <- rarefy(N, sample = subs3, se = T, MARG = 2))
@@ -2265,33 +2265,33 @@ sum(N)
 ## GRAFICO
 ############
 
-plot(subs3, rar3[1, ], ylab = "Riqueza de espécies",
+plot(subs3, rar3[1, ], ylab = "Riqueza de esp?cies",
 	axes = FALSE, xlab = "No. de Individuos",
 	type = "n", ylim = c(80, 200), xlim = c(500,
 	5000))
 axis(1, at = 1:5 * 1000)
 axis(2)
 box()
-text(2500, 200, "Rarefação (10 plots)")
+text(2500, 200, "Rarefa??o (10 plots)")
 
 lines(subs3, rar3[1, ], type = "b", col = "red")
 lines(subs3, rar3[1, ] + 2 * rar3[2, ], lty = 3, col = "red")
 lines(subs3, rar3[1, ] - 2 * rar3[2, ], lty = 3, col = "red")
 
 
-## Curva rarefação
+## Curva rarefa??o
 ***************************
 
 Coletor.curva <- specaccum(bci)
 
 
-## Inserir a linha da curva com rarefação
+## Inserir a linha da curva com rarefa??o
 *******************************************
 
 names(Coletor.curva)
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-	 ylab = "Riqueza de espécies")
+	 ylab = "Riqueza de esp?cies")
 
 lines(Coletor.curva$sites, Coletor.curva$richness, type = "b", lwd = 1.7,
 	lty = 1, col = "red")
@@ -2327,27 +2327,27 @@ est
 
 Coletor <- specaccum(est, method = "collector")
 
-## Gráfico de uma curva do coletor
+## Gr?fico de uma curva do coletor
 ***********************************
 
 names(Coletor)
 
 plot(Coletor$sites, Coletor$richness,  xlab = "Amostras",
-	 ylab = "Riqueza de espécies")
+	 ylab = "Riqueza de esp?cies")
 
-## Curva de acumulação
+## Curva de acumula??o
 ***************************
 
 Coletor.curva <- specaccum(est)
 
 
-## Inserir a linha da curva com rarefação
+## Inserir a linha da curva com rarefa??o
 *******************************************
 
 names(Coletor.curva)
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-	 ylab = "Riqueza de espécies", ylim = c(0,14), col = "red")
+	 ylab = "Riqueza de esp?cies", ylim = c(0,14), col = "red")
 
 lines(Coletor.curva$sites, Coletor.curva$richness, type = "b", lwd = 1.7,
 	lty = 1, col = "red")
@@ -2391,10 +2391,10 @@ testeInc1 <- poolaccum(est, permutations = 100, minsize = 1)
 summary(testeInc1, display = "jack1")
 
 
-## Gráfico
+## Gr?fico
 *************
 
-plot(seq(1, 14, by = 1), testeInc1$means[,4], ylab = "Riqueza de espécies",
+plot(seq(1, 14, by = 1), testeInc1$means[,4], ylab = "Riqueza de esp?cies",
 	xlab = "No. de Individuos", type = "n",
 	ylim = c(1, 20), xlim = c(1,
 	15))
@@ -2408,7 +2408,7 @@ legend(locator(1), labs, lty = c(3, 1),
 	col = c("red", "blue") , 
 	bty = "n")
 
-## Desvio padrão
+## Desvio padr?o
 *****************
 
 l1 <- sd(as.vector(testeInc1$jack1[1,]))
@@ -2439,7 +2439,7 @@ for (i in 1:14) {
 	Sobs [i] <-  c(sd(as.vector(testeInc1$S[i,])))
 	}
 
-## mais fácil
+## mais f?cil
 ***************
 
 jacksd <- apply(X = testeInc1$jack1, MARGIN = 1, FUN = sd)
@@ -2465,7 +2465,7 @@ lines(seq(1, 14, by = 1), testeInc1$means[,2] - Sobs,
 testeAbund <- estaccumR(est, permutations = 100)
 summary(testeAbund)## mostra Chao 1, ACE
 
-## Só mostrar o estimador que você deseja
+## S? mostrar o estimador que voc? deseja
 *******************************************
 
 summary(testeAbund, display = "ace")
@@ -2474,7 +2474,7 @@ summary(testeAbund, display = "ace")
 ## Grafico ACE
 ***************
 
-plot(seq(1, 14, by = 1), testeAbund$means[,3], ylab = "Riqueza de espécies",
+plot(seq(1, 14, by = 1), testeAbund$means[,3], ylab = "Riqueza de esp?cies",
 	xlab = "No. de Individuos", type = "n",
 	ylim = c(1, 20), xlim = c(1,
 	15))
@@ -2489,7 +2489,7 @@ legend(locator(1), labs, lty = c(4, 3),
 	col = c("red", "blue") , 
 	bty = "n")
 
-## Loop calcular o desvio padrão
+## Loop calcular o desvio padr?o
 *********************************
 
 ACE <- c()
@@ -2503,7 +2503,7 @@ for (i in 1:14) {
 	}
 
 
-## Linha com os desvios padrões
+## Linha com os desvios padr?es
 *********************************
 
 lines(seq(1, 14, by = 1), testeAbund$means[,2] + Sobs, 
@@ -2515,22 +2515,22 @@ lines(seq(1, 14, by = 1), testeAbund$means[,4] + ACE,
 lines(seq(1, 14, by = 1), testeAbund$means[,4] - ACE,
 	 lty = 4, col = "red")
 
-## Outro comando só que a planilha deve ser de outra maneira
+## Outro comando s? que a planilha deve ser de outra maneira
 *************************************************************
 
-(est1 <- colSums(est)) ## SOMA ABUNDÂNCIA DE CADA LINHA
+(est1 <- colSums(est)) ## SOMA ABUND?NCIA DE CADA LINHA
 
 ## Abundancia total por coleta
 ********************************
 
-## estimateR é baseada na abundância de um único sítio de amostragem
+## estimateR ? baseada na abund?ncia de um ?nico s?tio de amostragem
 
 (testeAbund1 <- estimateR(est1))
 
 
-## ESSES  COMANDO SÓ CALCULAM OS VALORES FINAIS DOS ESTIMADORES OU 
+## ESSES  COMANDO S? CALCULAM OS VALORES FINAIS DOS ESTIMADORES OU 
 ## VALORES ACUMULADOS POR AMOSTRAS, CONTUDO COMO COMENTADO NA AULA
-## ALGUMAS VEZES QUEREMOS ESTIMAR A RIQUEZA DE ESPÉCIES PELA ABUNDANCIA
+## ALGUMAS VEZES QUEREMOS ESTIMAR A RIQUEZA DE ESP?CIES PELA ABUNDANCIA
 
 
 ## Soma da abundancia total em cada amostra
@@ -2557,7 +2557,7 @@ Nest
 	 method = "exact", conditioned=TRUE))
 
 
-accumplot(Accum.1, xlab = "Abundância")
+accumplot(Accum.1, xlab = "Abund?ncia")
 
 (Accum.2 <- accumresult(est, y = Nest,
 	scale = "Total", method = "rarefaction")) ## USANDO METODOS DIFERENTES
@@ -2572,7 +2572,7 @@ accumplot(Accum.3)
 ## EXERCICIOS##
 ***************
 
-#Exercício 1#
+#Exerc?cio 1#
 *************
 
 exer <- read.csv(file.choose(),	header=T)
@@ -2580,14 +2580,14 @@ exer
 
 ## a ##
 
-sum(exer$Fragmento)## Abundância total
-sum(exer$Pasto)## Abundância total
-sum(exer$Borda)## Abundância total
-sum(exer$Cana)## Abundância total
+sum(exer$Fragmento)## Abund?ncia total
+sum(exer$Pasto)## Abund?ncia total
+sum(exer$Borda)## Abund?ncia total
+sum(exer$Cana)## Abund?ncia total
 
 ## b ## 
 
-specnumber(exer, MARGIN =  2)# número de espécies por comunidade
+specnumber(exer, MARGIN =  2)# n?mero de esp?cies por comunidade
 
 ## c ##
 
@@ -2596,7 +2596,7 @@ rarefy(exer$Pasto, sample = 30, MARGIN = 2)
 rarefy(exer$Borda, sample = 30, MARGIN = 2)
 rarefy(exer$Cana, sample = 30, MARGIN = 2)
 
-## Cria sub-amostras para rarefação
+## Cria sub-amostras para rarefa??o
 *************************************
 
 am1 <- c(seq(5, 91, by = 5))
@@ -2613,11 +2613,11 @@ Cana <- rarefy(exer$Cana, sample = am4, se = T, MARGIN = 2)
 ## GRAFICO
 ############
 
-plot(am4, Cana[1,], ylab = "Riqueza de espécies",
+plot(am4, Cana[1,], ylab = "Riqueza de esp?cies",
 	xlab = "No. de Individuos",
 	ylim = c(1, 20), xlim = c(1,
 	153), type= "n")
-text(15, 19, "Rarefação")
+text(15, 19, "Rarefa??o")
 
 lines(am1, Frga[1, ], type = "b", col = "red", lwd = 1.7)
 lines(am2, Pasto[1, ], type = "b", col = "blue", lwd = 1.7)
@@ -2638,7 +2638,7 @@ legend(locator(1), labs, lty = c(3, 1,2,4),
 
 abline(h = 0, v = 60)
 
-## Linhas com desvio padrão
+## Linhas com desvio padr?o
 ******************************
 
 lines(am1, Frga[1, ] + Frga[2, ], lwd = 1.7,
@@ -2674,22 +2674,22 @@ head(japi)
 
 japi.curva.1 <- specaccum(japi, method = "collector")
 
-## Gráfico de uma curva do coletor
+## Gr?fico de uma curva do coletor
 ***********************************
 
 names(japi.curva.1)
 
 plot(japi.curva.1$sites, japi.curva.1$richness,  xlab = "Amostras",
-	 ylab = "Riqueza de espécies")
+	 ylab = "Riqueza de esp?cies")
 
 
-## Curva de acumulação
+## Curva de acumula??o
 ***************************
 
 japi.curva <- specaccum(japi)
 
 
-## Inserir a linha da curva com rarefação
+## Inserir a linha da curva com rarefa??o
 *******************************************
 
 names(japi.curva)
@@ -2697,14 +2697,14 @@ names(japi.curva)
 lines(japi.curva$sites, japi.curva$richness, type = "b", lwd = 1.7,
 	lty = 1, col = "red")
 
-## Rarefação por amostra
+## Rarefa??o por amostra
 ****************************
 
 (Accum.japi <- accumresult(japi, method = "rarefaction")) 
 accumplot(Accum.japi, ci.type = "polygon", col = "gray")
 
 
-#Exercício 3#
+#Exerc?cio 3#
 *************
   
 ## a ##
@@ -2712,10 +2712,10 @@ Coletor.curva <- specaccum(est)
 
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-   ylab = "Riqueza de espécies", ylim = c(0,14), col = "red")
+   ylab = "Riqueza de esp?cies", ylim = c(0,14), col = "red")
 
 
-boot <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho mínimo que vai começar a amostragem, neste caso 1
+boot <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho m?nimo que vai come?ar a amostragem, neste caso 1
 summary(boot, display = "boot")
 
 
@@ -2728,9 +2728,9 @@ Coletor.curva <- specaccum(est)
 
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-   ylab = "Riqueza de espécies", ylim = c(0,14), col = "red")
+   ylab = "Riqueza de esp?cies", ylim = c(0,14), col = "red")
 
-chao <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho mínimo que vai começar a amostragem, neste caso 1
+chao <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho m?nimo que vai come?ar a amostragem, neste caso 1
 summary(testeInc1, display = "chao")
 
 
@@ -2743,9 +2743,9 @@ Coletor.curva <- specaccum(est)
 
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-   ylab = "Riqueza de espécies", ylim = c(0,14), col = "red")
+   ylab = "Riqueza de esp?cies", ylim = c(0,14), col = "red")
 
-j1 <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho mínimo que vai começar a amostragem, neste caso 1
+j1 <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho m?nimo que vai come?ar a amostragem, neste caso 1
 summary(testeInc1, display = "jack1")
 
 lines(seq(1, 14, by = 1), j1$means[,2], type = "b", col = "blue")
@@ -2757,9 +2757,9 @@ Coletor.curva <- specaccum(est)
 
 
 plot(Coletor.curva$sites, Coletor.curva$richness,  xlab = "Amostras",
-   ylab = "Riqueza de espécies", ylim = c(0,14), col = "red")
+   ylab = "Riqueza de esp?cies", ylim = c(0,14), col = "red")
 
-j2 <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho mínimo que vai começar a amostragem, neste caso 1
+j2 <- poolaccum(est, permutations = 100, minsize = 1)# minsize: Tamanho m?nimo que vai come?ar a amostragem, neste caso 1
 summary(testeInc1, display = "jack2")
 
 
@@ -2770,45 +2770,45 @@ lines(seq(1, 14, by = 1), j2$means[,2], type = "b", col = "blue")
 ########################################################################################################################
 
 ==========================
-##ÍNDICES DE DIVERSIDADE##
+##?NDICES DE DIVERSIDADE##
 ==========================
 
-library(vegan)# pacote com a função "diversity"
+library(vegan)# pacote com a fun??o "diversity"
 mata.atlantica=read.table(file.choose(), header=T)# ler conjunto de dados
 mata.atlantica
 sum(mata.atlantica[1,])# mudem o numero 1 por outra linha que queira testar
 sum(mata.atlantica[2,])# mudem o numero 2 por outra linha que queira testar
-# Notem que todas as comunidades possuem 100 indivíduos
+# Notem que todas as comunidades possuem 100 indiv?duos
 
-H=diversity(mata.atlantica, index="shannon")# calcula índice de Shannon para
+H=diversity(mata.atlantica, index="shannon")# calcula ?ndice de Shannon para
 # cada comunidade 
 H
 
-D=diversity(mata.atlantica, index="simpson")# calcula índice de Simpson para
-# cada comunidade. Este cálcula o Simpson 1-D 
+D=diversity(mata.atlantica, index="simpson")# calcula ?ndice de Simpson para
+# cada comunidade. Este c?lcula o Simpson 1-D 
 D
 
-D.inv=diversity(mata.atlantica, index="invsimpson")# calcula índice de 
-D.inv # Símpson para cada comunidade. Este cálcula o Simpson 1 / D. 
+D.inv=diversity(mata.atlantica, index="invsimpson")# calcula ?ndice de 
+D.inv # S?mpson para cada comunidade. Este c?lcula o Simpson 1 / D. 
 
 riqueza=specnumber(mata.atlantica) # riqueza de cada localidade
 riqueza.freq=specnumber(mata.atlantica, M=2) # riqueza de cada localidade
-riqueza.freq # este cálculo (inserindo M=2 na fórmula)implementa
-# a frequência das espécies em relação a todas as amostras
+riqueza.freq # este c?lculo (inserindo M=2 na f?rmula)implementa
+# a frequ?ncia das esp?cies em rela??o a todas as amostras
 # com um calculo simples podemos calcular a frequencia relativa que nos
-# dá uma noção de distribuição da espécie nas amostras
+# d? uma no??o de distribui??o da esp?cie nas amostras
 
 freq.relativa=(riqueza.freq*100)/(nrow(mata.atlantica)) # o comando nrow 
-# mostra o número de linhas (ou seja, de amostras) da matriz. Uma espécie
-# que ocorrer em todas as amostras terá a freq.relativa = 100%
+# mostra o n?mero de linhas (ou seja, de amostras) da matriz. Uma esp?cie
+# que ocorrer em todas as amostras ter? a freq.relativa = 100%
 freq.relativa
 
 diversidade.MA=cbind(riqueza, H, D, D.inv)# cria uma 
-# matriz com os índices calculados e a riqueza de cada local.
+# matriz com os ?ndices calculados e a riqueza de cada local.
 diversidade.MA
-# muitos autores mostram que os índices trazem respostas muito similares
-# veja o gráfico abaixo com a relação da riqueza com os índices e dos 
-# índices entre si.
+# muitos autores mostram que os ?ndices trazem respostas muito similares
+# veja o gr?fico abaixo com a rela??o da riqueza com os ?ndices e dos 
+# ?ndices entre si.
 pairs(cbind(riqueza, H, D, D.inv), pch="+", col="black")
 
 ##EXEMPLO 1##
@@ -2819,8 +2819,8 @@ brom1
 
 ##Pergunta 1##
 **************
-divsp1=diversity(brom, index="simpson") ##calcula a diversidade das especies das bromélias
-                                        ##utilizando o índice Simpson
+divsp1=diversity(brom, index="simpson") ##calcula a diversidade das especies das brom?lias
+                                        ##utilizando o ?ndice Simpson
 divsp1
 
 ##Pergunta 2##
@@ -2835,41 +2835,41 @@ div.vol.shannon
 ## Species Abundance Distributions (SADs): McGill et al. 2007, Ecol Lett. 10:995
 *********************************************************************************
   
-library(vegan) # pacote que possui a função radfit
+library(vegan) # pacote que possui a fun??o radfit
 
 rios=read.table(file.choose(), h=T)#ler a planilha de interesse
-rios # conferir se os dados estão OK.
+rios # conferir se os dados est?o OK.
 
 rad.rio1=radfit(rios[1,])# implementa o teste somente para o Rio 1.
-rad.rio1 # conferir resultados da análise
-# NOTA: o menor valor de AIC representa o modelo teórico que melhor explica os
-# dados reais. No exemplo rad.rio1 o menor valor de AIC (119.52) é do modelo 
+rad.rio1 # conferir resultados da an?lise
+# NOTA: o menor valor de AIC representa o modelo te?rico que melhor explica os
+# dados reais. No exemplo rad.rio1 o menor valor de AIC (119.52) ? do modelo 
 # Null, que representa o modelo "Broken Stick" 
-plot(rad.rio1, xlab="Ordem das espécies", ylab="Abundância", pch=19)
-# faz o gráfico com todas as curvas e os dados reais. A linha destacada 
-# representa o modelo que menos desvia dos seus dados (círculos pretos)
-# o argumento pch=19 representa os seus dados e como serão representados
-# modifique o valor do pch e escolha o símbolo de sua preferência
+plot(rad.rio1, xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
+# faz o gr?fico com todas as curvas e os dados reais. A linha destacada 
+# representa o modelo que menos desvia dos seus dados (c?rculos pretos)
+# o argumento pch=19 representa os seus dados e como ser?o representados
+# modifique o valor do pch e escolha o s?mbolo de sua prefer?ncia
 
 rad.rio2=radfit(rios[2,])# implementa o teste somente para o Rio 2.
 rad.rio2
-plot(rad.rio2, xlab="Ordem das espécies", ylab="Abundância", pch=19)
+plot(rad.rio2, xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
 
 rad.rio3=radfit(rios[3,])# implementa o teste somente para o Rio 3.
 rad.rio3
-plot(rad.rio3, xlab="Ordem das espécies", ylab="Abundância", pch=19)
+plot(rad.rio3, xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
 
-par(mfrow=c(2, 2))# este comando permite que os gráficos sejam apresentados
+par(mfrow=c(2, 2))# este comando permite que os gr?ficos sejam apresentados
 # na mesma janela
-plot(rad.rio1, main="Rio 1", xlab="Ordem das espécies", ylab="Abundância", pch=19)
-plot(rad.rio2, main="Rio 2", xlab="Ordem das espécies", ylab="Abundância", pch=19)
-plot(rad.rio3, main="Rio 3", xlab="Ordem das espécies", ylab="Abundância", pch=19)
+plot(rad.rio1, main="Rio 1", xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
+plot(rad.rio2, main="Rio 2", xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
+plot(rad.rio3, main="Rio 3", xlab="Ordem das esp?cies", ylab="Abund?ncia", pch=19)
 
 
 ##Praticando 1##
 praiaf=read.table(file.choose())
 praiaf
-rad.praiaA=radfit(praiaf[1,])#plota a distribuição de abundância
+rad.praiaA=radfit(praiaf[1,])#plota a distribui??o de abund?ncia
 rad.praiaA
 plot(rad.praiaA)
 
@@ -2879,33 +2879,33 @@ plot(rad.praiaB)
 
 ##nestes comandos tem que fazer para cada praia
 
-praias=radfit(praiaf)##roda a distribuição de abundância para todas as praias de uma só vez
+praias=radfit(praiaf)##roda a distribui??o de abund?ncia para todas as praias de uma s? vez
 praias
 summary(praias)#aparece o akaike de todas as praias
 
-plot(praias)#plota todos os gráficos juntos
+plot(praias)#plota todos os gr?ficos juntos
 
 
 
-# ÍNDICES DE DIVERSIDADE BETA
+# ?NDICES DE DIVERSIDADE BETA
 *****************************
 
 library(vegan)
-betadiver(help=TRUE)# lista dos índices de diversidade beta discutidos em
+betadiver(help=TRUE)# lista dos ?ndices de diversidade beta discutidos em
 # Koleff et al. 2003, J.An.Ecol. 72: 367-382.
 
-# Índice clássico de Whittaker (beta w)
+# ?ndice cl?ssico de Whittaker (beta w)
 salinidade=read.table(file.choose(), header=T)#importando o conjunto de dados
-salinidade # gradiente de salinidade (linhas) e espécies nas colunas (n=50)
+salinidade # gradiente de salinidade (linhas) e esp?cies nas colunas (n=50)
 diversidade.beta=betadiver(salinidade, "w")
 diversidade.beta # matriz triangular com os valores de diversidade beta entre 
-# todos os pares possíveis
+# todos os pares poss?veis
 
-# Índices de Jaccard e Sorensen (binários)
-jaccard=betadiver(salinidade, "j")# índice de jaccard entre todas amostras
-sorensen=betadiver(salinidade, "sor")# índice de sorensen entre todas amostras
+# ?ndices de Jaccard e Sorensen (bin?rios)
+jaccard=betadiver(salinidade, "j")# ?ndice de jaccard entre todas amostras
+sorensen=betadiver(salinidade, "sor")# ?ndice de sorensen entre todas amostras
 
-# se você tiver interessado em um par específico de amostras use "scores"
+# se voc? tiver interessado em um par espec?fico de amostras use "scores"
 scores(jaccard)
 scores(sorensen)
 
@@ -2914,35 +2914,35 @@ scores(sorensen)
 library(fossil)
 
 
-# notem que os valores dos índices por si trazem somente a informação de
-# semelhança/diferença entre as amostras. Porém não nos informa o que causa essa
-# a variação desse valor. Veja as funções "betadisper", "adonis" e "mantel" para
-# testar hipóteses específicas sobre diversidade beta
+# notem que os valores dos ?ndices por si trazem somente a informa??o de
+# semelhan?a/diferen?a entre as amostras. Por?m n?o nos informa o que causa essa
+# a varia??o desse valor. Veja as fun??es "betadisper", "adonis" e "mantel" para
+# testar hip?teses espec?ficas sobre diversidade beta
 
-Índices de Bray-Curtis e Morisita-Horn (baseado na abundância)
+?ndices de Bray-Curtis e Morisita-Horn (baseado na abund?ncia)
 library(vegan)
-data(mite)# ácaros associados a 70 amostras de solo
-bray=vegdist(mite, "bray")#análise similaridade de Bray-Curtis
+data(mite)# ?caros associados a 70 amostras de solo
+bray=vegdist(mite, "bray")#an?lise similaridade de Bray-Curtis
 bray
-morisita.horn=vegdist(mite, "horn")#análise de similaridade de Morisita-Horn
+morisita.horn=vegdist(mite, "horn")#an?lise de similaridade de Morisita-Horn
 morisita.horn
 
-# um exemplo de extensão das análises de similaridade para testar hipóteses é
-# utilizar uma análise de mantel para correlacionar a matriz (p.ex. bray) 
-# triangular de similaridade de espécies com uma matriz de similaridade ambiental
+# um exemplo de extens?o das an?lises de similaridade para testar hip?teses ?
+# utilizar uma an?lise de mantel para correlacionar a matriz (p.ex. bray) 
+# triangular de similaridade de esp?cies com uma matriz de similaridade ambiental
 
 library(vegan)
-data(varespec)# espécies de árvores coletadas em 24 localidades
-data(varechem)# características químicas dos solos das 24 localidades
-dist.species=vegdist(varespec, "bray")# implementa a função bray-curtis
-dist.chemical=vegdist(scale(varechem), "euclidean")# a função scale padroniza as
-# variáveis ambientais que estão em unidade muito diferentes
+data(varespec)# esp?cies de ?rvores coletadas em 24 localidades
+data(varechem)# caracter?sticas qu?micas dos solos das 24 localidades
+dist.species=vegdist(varespec, "bray")# implementa a fun??o bray-curtis
+dist.chemical=vegdist(scale(varechem), "euclidean")# a fun??o scale padroniza as
+# vari?veis ambientais que est?o em unidade muito diferentes
 associacao=mantel(dist.species, dist.chemical)
 associacao
-# valores significativo indicam que a composição de espécies é determinada pelas
-# variáveis ambientais (neste caso)
+# valores significativo indicam que a composi??o de esp?cies ? determinada pelas
+# vari?veis ambientais (neste caso)
 
-# Índices Chao-Jaccard e Chao-Sorensen
+# ?ndices Chao-Jaccard e Chao-Sorensen
 library(fossil)
 
 CSoren.dist=ecol.dist(ilhas, chao.sorenson, type="dis")
@@ -2950,11 +2950,11 @@ CSoren.simi=ecol.dist(ilhas, chao.sorenson, type="sim")
 CJaccar.dist=ecol.dist(ilhas, chao.jaccard, type="dis")
 CJaccar.simi=ecol.dist(ilhas, chao.jaccard, type="sim")
 
-# usando o argumento type="dis" e type="sim" você calcula a matriz de
+# usando o argumento type="dis" e type="sim" voc? calcula a matriz de
 # dissimilaridade ("dis") e similaridade ("sim")
 
 # se optar por calcular a similaridade entre duas localidades use a seguinte 
-# função:
+# fun??o:
 library(fossil)
 
 IlhaA=ilhas[,1]
@@ -2963,7 +2963,7 @@ CSoren.A.B=chao.sorenson(IlhaA, IlhaB)
 CJaccar.A.B=chao.jaccard(IlhaA, IlhaB)
 CSoren.A.B
 CJaccar.A.B
-# outros índices disponíveis no pacote "fossil"
+# outros ?ndices dispon?veis no pacote "fossil"
 
 Comunidade.A <- c(1,0,4,3,5,0,0,7)
 Comunidade.B <- c(2,1,3,0,0,1,0,6)
@@ -2973,28 +2973,28 @@ simpson(Comunidade.A, Comunidade.B)
 sorenson(Comunidade.A, Comunidade.B)
 morisita.horn(Comunidade.A, Comunidade.B)
 
-# Teste de homogeneidade de dispersões multivariadas (vamos chamar de "HDM")
-library(vegan)# possui as funções betadisper que faz a análise HDM e vegdist
-# que calcula a dissimilaridade com seu índice de interesse
+# Teste de homogeneidade de dispers?es multivariadas (vamos chamar de "HDM")
+library(vegan)# possui as fun??es betadisper que faz a an?lise HDM e vegdist
+# que calcula a dissimilaridade com seu ?ndice de interesse
 cafe=read.table(file.choose(), header=T)# ler a planilha de interesse
-head(cafe)#conferir parte da planilha que você importou no R
+head(cafe)#conferir parte da planilha que voc? importou no R
 tipo.matriz=factor(c(rep(1,16), rep(2,8)), labels = c("com.mata","sem.mata"))
-# o comando acima cria os fatores. Ou seja, os grupos que você quer comparar
-# neste exemplo você que testar se a diversidade beta dos "polinizadores"
-# do café é maior em plantações rodeadas por mata atlântica ou por pasto.
+# o comando acima cria os fatores. Ou seja, os grupos que voc? quer comparar
+# neste exemplo voc? que testar se a diversidade beta dos "polinizadores"
+# do caf? ? maior em planta??es rodeadas por mata atl?ntica ou por pasto.
 tipo.matriz
 dissimilaridade=vegdist(cafe, "bray")
 head(dissimilaridade)
-HDM=betadisper(dissimilaridade, tipo.matriz)# função que faz a HDM
+HDM=betadisper(dissimilaridade, tipo.matriz)# fun??o que faz a HDM
 HDM
 valor.P=permutest(HDM, pairwise = F)
 valor.P
 plot(HDM)
 
-####EXERCÍCIOS####
+####EXERC?CIOS####
 ******************
   
-##Exercício 01
+##Exerc?cio 01
     
 clone1=read.table(file.choose())
 clone1
@@ -3002,7 +3002,7 @@ dissimilaridade=vegdist(clone1, "jaccard")####lembrar que o vegdist sempre calcu
 dissimilaridade
 
 
-##Exercício 02
+##Exerc?cio 02
 
 bw=read.table(file.choose(), header=T)
 head(bw)
@@ -3022,13 +3022,13 @@ plot(HDMbw)
 #########################################################################################################################
 
 =========================================
-##INTRODUÇÃO À ESTATÍSTICA MULTIVARIADA##
+##INTRODU??O ? ESTAT?STICA MULTIVARIADA##
 =========================================
 
-##Análise de agrupamento
+##An?lise de agrupamento
 ************************
 
-##Exercício 1
+##Exerc?cio 1
 
 library(vegan)
 data(mite)##exemplo
@@ -3037,32 +3037,32 @@ matriz1<-hclust(matriz, method="complete")
 plot(matriz1)
 
 outroindice<-vegdist(mite, method="jaccard")##transforma a matriz com outro 
-  						  #índice
+  						  #?ndice
 outro<-hclust(outroindice, method="complete")
 plot(outro)
 #############
 ##com pvclust
 
-##Exercício 2
+##Exerc?cio 2
 
 library("pvclust")
 dist<- function(x,...){
 vegdist(x,...)
-}###acrescenta as funções do vegdist no dist
+}###acrescenta as fun??es do vegdist no dist
 bocaina<-read.table(file.choose())#######procura arquivo (TXT)
 boc=t(bocaina)##para transpor a matriz
-mz<-pvclust(boc, method.hclust="average", method.dist="horn")##análise
+mz<-pvclust(boc, method.hclust="average", method.dist="horn")##an?lise
 plot(mz)
 pvrect(mz)###agrupa
 
 
-##Exercício 3
+##Exerc?cio 3
 
 install.packages("ade4")
 library("ade4")
 data(dunedata)
 ddveg=dunedata$veg
-an.dd=pvclust(ddveg, method.hclust="average", method.dist="bray")##análise
+an.dd=pvclust(ddveg, method.hclust="average", method.dist="bray")##an?lise
 plot(an.dd)
 pvrect(an.dd)###agrupa
 
@@ -3086,18 +3086,18 @@ tab.resultado=cbind(resultado$maxcls,resultado$indcls,resultado$pval)
 colnames(tab.resultado)<-c("maxgrp", "ind. value","P")
 tab.resultado
 
-##EXERCÏCIOS##
+##EXERC?CIOS##
 
-##Exercício1
+##Exerc?cio1
 
 indval=read.table(file.choose(),h=T)
-turb=indval[,1]###selecionando apenas a primeira coluna; no caso, as espécies 
+turb=indval[,1]###selecionando apenas a primeira coluna; no caso, as esp?cies 
 		  ###que indicam essas classes de turbidez
 turb
 sp=indval[,-1]
 sp
 
-resul=indval(sp, turb)###1º vem a matriz(sp);2º a variável agrupante (turb)
+resul=indval(sp, turb)###1? vem a matriz(sp);2? a vari?vel agrupante (turb)
 summary(resul)
 summaryresul$maxcls
 resul$maxcls
@@ -3107,7 +3107,7 @@ tab.resul=cbind(resul$maxcls, resul$indcls, resul$pval)
 colnames(tab.resul)<-c("maxgrp", "ind. value","P")
 tab.resul
 
-####Outro exercício (IndVal)
+####Outro exerc?cio (IndVal)
 
 anuro=read.table(file.choose())
 grupo=read.table(file.choose())
@@ -3115,28 +3115,28 @@ anuros=t(anuro)
 grupo
 anuros
 g1=sort(grupo[,1], decreasing=FALSE)
-resultado=indval(anuros, g1)###1º vem a matriz(anuros);
-					 ###2º a variável agrupante (grupo)
+resultado=indval(anuros, g1)###1? vem a matriz(anuros);
+					 ###2? a vari?vel agrupante (grupo)
 summary(resultado)
 
 ***************
 ##ANOSIM e MRPP
 ***************
 
-##EXERCÍCIOS##
+##EXERC?CIOS##
 
-##Exercício1
+##Exerc?cio1
 
 lagos=read.table(file.choose())
 lagos
-lagospa=decostand(lagos,"pa")#transforma os dados em presença/ausência
+lagospa=decostand(lagos,"pa")#transforma os dados em presen?a/aus?ncia
 lagospa
 conec=factor(c(rep(1,8), rep(2,8)),labels=c("conect","isol"))
 conec
 ans=anosim(lagospa,conec)
 ans
 
-##Exercício2
+##Exerc?cio2
 
 ans2=anosim(lagos,conec)
 summary(ans2)
@@ -3144,7 +3144,7 @@ plot(ans2)
 names(ans2)
 ?names
 
-##Exercício3
+##Exerc?cio3
 
 art=read.table(file.choose())
 head(art)
@@ -3153,7 +3153,7 @@ mp
 ansmp=anosim(art,mp)
 ansmp
 
-##Exercício4
+##Exerc?cio4
 
 cer=read.table(file.choose(), head=T)
 head(cer)
@@ -3169,7 +3169,7 @@ mrppveg
 ##### PCA #####
 ===============
   
-##Exercício1
+##Exerc?cio1
 library(vegan)
 library(MASS)
 data(crabs)
@@ -3190,7 +3190,7 @@ biplot.rda(resrda, scaling=1)
 biplot.rda(resrda, scaling=2)
 biplot(resrda)
 
-##Exercício2
+##Exerc?cio2
 
 doubs=read.csv(file.choose())
 head(doubs)
@@ -3229,7 +3229,7 @@ evplot = function(ev) {
 
 objeto1=rdadoubs$CA$eig#extrai os autovalores
 objeto1
-evplot(objeto1)#plota o gráfico
+evplot(objeto1)#plota o gr?fico
 
 
 ===============
@@ -3263,7 +3263,7 @@ reshorn
 ##### CCA e RDA ####
 ====================
 
-##Exercício1
+##Exerc?cio1
 
 ?rda
 doubsenv=read.csv(file.choose())
@@ -3273,11 +3273,11 @@ head(doubsspe)
 respcca=rda(doubsspe,doubsenv)
 plot(respcca)
 
-##Exercício2
+##Exerc?cio2
 
 data(mite)
 data(mite.env)
-ccamite=cca(mite~., mite.env)##~. roda com todas as variáveis
+ccamite=cca(mite~., mite.env)##~. roda com todas as vari?veis
 plot(ccamite)
 
 
@@ -3289,32 +3289,32 @@ plot(ccamite)
 
 library(vegan)
 data(mite)
-mite.hel=decostand(mite, "hellinger")##"hellinger"-padronização dos dados;
-  					 ##diferenças nas abundâncias
+mite.hel=decostand(mite, "hellinger")##"hellinger"-padroniza??o dos dados;
+  					 ##diferen?as nas abund?ncias
 tibouchina=read.table(file.choose())
 mm1 <- model.matrix(~ dtri + quag + arfl + esfl, data=tibouchina)[,-1]##matriz
 											    #1
-###"model.matrix" transforma variáveis categóricas e não categóricas
-###para poder usa-las nas análises
+###"model.matrix" transforma vari?veis categ?ricas e n?o categ?ricas
+###para poder usa-las nas an?lises
  
 mm2 <- model.matrix(~ tiso + dens.tc + localidade, tibouchina)[, -1]##matriz 2
-rda.parcial=rda(mite.hel ~ mm1+Condition(mm2))##relação da comp. sp com matriz
+rda.parcial=rda(mite.hel ~ mm1+Condition(mm2))##rela??o da comp. sp com matriz
 							    ## ambiental controlada por 
-							    ##outra variável (condition(mm2) 
+							    ##outra vari?vel (condition(mm2) 
 rda.parcial
-anova(rda.parcial)#significancia das variáveis com a composição de espécies
+anova(rda.parcial)#significancia das vari?veis com a composi??o de esp?cies
 sig.a=rda(mite.hel, mm1, mm2)##mite.hell=ambiente
 				     ##"mm1"=o que quero modelar (ambiente)
-				     ##"mm2"=o que eu quero controlar (covariável)
+				     ##"mm2"=o que eu quero controlar (covari?vel)
 				     ##tiro o efeito de mm2 sobre mm1 e relaciono "mm1"
-				     ##com a composição (mite.hel)
+				     ##com a composi??o (mite.hel)
 sig.c=rda(mite.hel, mm2, mm1)##inverso ao de cima
 componente.a=anova(sig.a, step=10000, perm.max=1000)
 componente.c=anova(sig.c, step=10000, perm.max=1000)
 plot(rda.parcial)
 
 
-# partição de variância
+# parti??o de vari?ncia
 
 particao.ex1=varpart(mite.hel, mm1, mm2)
 particao.ex1
@@ -3332,7 +3332,7 @@ mite.hel=decostand(mite, "hellinger")
 rda.exemplo2=rda(mite.hel~DensTric+EspFoliar+N+Enx+Prot+Acucar+Condition(as.matrix(mite.pcnm)), data=biotico)
 rda.exemplo2
 
-# partição de variância para ver a explicação de cada componente
+# parti??o de vari?ncia para ver a explica??o de cada componente
 
 particao.ex2=varpart(mite.hel,~DensTric+EspFoliar,~N+Enx+Prot+Acucar,mite.pcnm, data=biotico)
 particao.ex2
@@ -3340,7 +3340,7 @@ showvarparts(3)
 plot(particao.ex2)
 
 
-# digite o comando abaixo para entender melhor como funciona a partição de variância:
+# digite o comando abaixo para entender melhor como funciona a parti??o de vari?ncia:
 
 vegandocs("partition")
 
@@ -3350,8 +3350,8 @@ vegandocs("partition")
 
 # 10 - Protest
 
-library(vegan)# pacote com a função protest e procrustes
-library(labdsv) #pacote com a função nmds
+library(vegan)# pacote com a fun??o protest e procrustes
+library(labdsv) #pacote com a fun??o nmds
 
 ##Exemplo1
 
@@ -3372,18 +3372,18 @@ plot(concordancia)
 
 
 # 10 - Protest "Extendido"
-#Com a análise anterior pode saber se peixes e macroinvetebrados tem a mesma
-#resposta aos lagos, ou seja, se possuem a mesma estruturação espacial.
-#Como alternativa, podemos testar se as características físico-químicas do
+#Com a an?lise anterior pode saber se peixes e macroinvetebrados tem a mesma
+#resposta aos lagos, ou seja, se possuem a mesma estrutura??o espacial.
+#Como alternativa, podemos testar se as caracter?sticas f?sico-qu?micas do
 #riacho afetam tanto peixes quanto macroinvertebrados 
 #artigo: Paavola et al. 2006, Ecological Applications 16:368-379.
 
-library(vegan)# pacote com a função protest e procrustes
-library(labdsv) #pacote com a função nmds
+library(vegan)# pacote com a fun??o protest e procrustes
+library(labdsv) #pacote com a fun??o nmds
 
 lagos=read.table(file.choose(), header = TRUE)
 
-# a primeira parte da análise é igual a anterior que compara a concordância
+# a primeira parte da an?lise ? igual a anterior que compara a concord?ncia
 # entre peixes e macroinvertebrados
 
 peixe.dist=vegdist(peixes, "bray", binary=T)
